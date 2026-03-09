@@ -1,14 +1,496 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicolas Kloska – Consultant en Droit du Travail & Sécurité Sociale</title>
-  <style>body { font-family: Arial, sans-serif; text-align: center; padding: 50px; } h1 { color: #333; }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolas Kloska · Consultant IA Juridique · Normandie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:    #0f2240;
+  --navy2:   #1B3A6B;
+  --teal:    #048A81;
+  --teal-lt: #0aafa4;
+  --gold:    #c9a84c;
+  --gold-lt: #e8c97a;
+  --cream:   #f5f0e8;
+  --white:   #ffffff;
+  --smoke:   #f0ede8;
+  --text:    #1a1a2e;
+  --muted:   #7a7a8c;
+  --border:  rgba(201,168,76,0.25);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--cream);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(15,34,64,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:padding 0.3s}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:0.05em;color:var(--gold);text-decoration:none}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{font-size:0.82rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,240,232,0.7);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:0.55rem 1.4rem;border-radius:2px;font-weight:600!important}
+.nav-cta:hover{background:var(--gold-lt)!important}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:10rem 4rem 6rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(4,138,129,0.13) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,168,76,0.06) 0%,transparent 50%),linear-gradient(160deg,#0f2240 0%,#0a1a32 60%,#081525 100%)}
+.hero-grid{position:absolute;inset:0;z-index:0;opacity:0.035;background-image:linear-gradient(rgba(201,168,76,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,0.8) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{position:relative;z-index:1;max-width:880px}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;border:1px solid var(--border);border-radius:2px;padding:0.4rem 1rem;margin-bottom:2.5rem;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);opacity:0;animation:fadeUp 0.8s 0.2s forwards}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.05;letter-spacing:-0.01em;opacity:0;animation:fadeUp 0.9s 0.4s forwards}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-title strong{font-weight:600}
+.hero-statement{margin-top:2rem;font-family:'DM Mono',monospace;font-size:0.9rem;color:var(--teal-lt);letter-spacing:0.02em;line-height:1.6;border-left:2px solid var(--teal);padding-left:1.2rem;opacity:0;animation:fadeUp 0.9s 0.6s forwards}
+.hero-desc{margin-top:2rem;font-size:1.05rem;font-weight:300;line-height:1.8;color:rgba(245,240,232,0.72);max-width:620px;opacity:0;animation:fadeUp 0.9s 0.8s forwards}
+.hero-actions{display:flex;gap:1.2rem;margin-top:3rem;flex-wrap:wrap;opacity:0;animation:fadeUp 0.9s 1s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:0.6rem;background:var(--gold);color:var(--navy);padding:0.9rem 2rem;border-radius:2px;font-size:0.88rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--gold-lt);transform:translateY(-2px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:0.6rem;border:1px solid var(--border);color:var(--cream);padding:0.9rem 2rem;border-radius:2px;font-size:0.88rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;background:transparent}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:3rem;margin-top:5rem;opacity:0;animation:fadeUp 0.9s 1.2s forwards;padding-top:3rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold);line-height:1}
+.stat-label{font-size:0.78rem;color:rgba(245,240,232,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-top:0.3rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTIONS */
+section{padding:7rem 4rem}
+.section-label{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:var(--cream)}
+.section-title em{font-style:italic;color:var(--gold)}
+.section-title strong{font-weight:600}
+
+/* TUNNEL */
+#tunnel{background:#0a1a32}
+.tunnel-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:4rem;border:1px solid var(--border)}
+.tunnel-step{padding:2rem 1.5rem;border-right:1px solid var(--border);position:relative;transition:background 0.3s}
+.tunnel-step:last-child{border-right:none}
+.tunnel-step:hover{background:rgba(201,168,76,0.05)}
+.tunnel-step-tag{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.8rem}
+.tunnel-step-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--cream);line-height:1.3;margin-bottom:0.6rem}
+.tunnel-step-price{font-family:'DM Mono',monospace;font-size:0.76rem;color:var(--gold);font-weight:500}
+.tunnel-arrow{position:absolute;right:-9px;top:50%;transform:translateY(-50%);z-index:1;color:rgba(201,168,76,0.5);font-size:1.2rem}
+
+/* SERVICES */
+#services{background:var(--navy)}
+.services-intro{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-bottom:5rem;align-items:end}
+.services-note{font-size:0.9rem;color:rgba(245,240,232,0.45);font-style:italic;line-height:1.8}
+.service-row{border-top:1px solid var(--border);padding:4rem 0}
+.service-row:last-child{border-bottom:1px solid var(--border)}
+.service-row-header{display:grid;grid-template-columns:280px 1fr;gap:4rem;align-items:start}
+.service-row-label{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;line-height:1.3;color:var(--cream);padding-top:0.3rem}
+.service-row-quote{font-size:0.85rem;color:rgba(245,240,232,0.4);font-style:italic;line-height:1.75;margin-top:0.8rem}
+.service-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.service-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:2px;padding:2rem;transition:all 0.3s}
+.service-card:hover{background:rgba(201,168,76,0.05);border-color:rgba(201,168,76,0.4);transform:translateY(-2px)}
+.card-icon{font-size:1.5rem;margin-bottom:1rem}
+.card-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--cream);margin-bottom:0.4rem}
+.card-subtitle{font-size:0.77rem;color:var(--teal-lt);letter-spacing:0.04em;margin-bottom:1rem}
+.card-features{list-style:none;margin-bottom:1.2rem}
+.card-features li{font-size:0.83rem;color:rgba(245,240,232,0.62);line-height:1.65;padding:0.2rem 0;display:flex;gap:0.5rem}
+.card-features li::before{content:'—';color:var(--teal);flex-shrink:0}
+.card-roi{background:rgba(4,138,129,0.1);border-left:2px solid var(--teal);padding:0.7rem 1rem;margin-bottom:1rem;font-size:0.79rem;color:var(--teal-lt);line-height:1.55;font-weight:500}
+.card-price{font-family:'DM Mono',monospace;font-size:0.9rem;color:var(--gold);font-weight:500}
+.card-bpi{font-size:0.72rem;color:var(--teal);margin-top:0.3rem}
+.card-testimonial{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(201,168,76,0.15);font-size:0.79rem;font-style:italic;color:rgba(245,240,232,0.45);line-height:1.65}
+.card-testimonial cite{display:block;margin-top:0.4rem;font-style:normal;font-size:0.71rem;font-weight:500;color:var(--teal)}
+.modules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin-top:1rem}
+.module-chip{background:rgba(255,255,255,0.03);border:1px solid var(--border);padding:0.9rem 1rem;border-radius:2px;transition:all 0.2s}
+.module-chip:hover{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.04)}
+.module-chip-title{font-size:0.82rem;font-weight:600;color:var(--cream);margin-bottom:0.25rem}
+.module-chip-price{font-family:'DM Mono',monospace;font-size:0.73rem;color:var(--gold)}
+.bundle-box{margin-top:1rem;padding:1rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3)}
+.bundle-title{font-size:0.88rem;font-weight:700;color:var(--gold);margin-bottom:0.25rem}
+.bundle-sub{font-size:0.79rem;color:rgba(245,240,232,0.55)}
+.bundle-price{font-family:'DM Mono',monospace;font-size:0.9rem;color:var(--gold);margin-top:0.4rem}
+
+/* URGENCY */
+#urgency{background:linear-gradient(135deg,#081525 0%,#0f2240 50%,#081830 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.urgency-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:4rem;background:var(--border)}
+.urgency-card{background:var(--navy);padding:2.5rem 2rem}
+.urgency-icon{font-size:2rem;margin-bottom:1.2rem}
+.urgency-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--gold);margin-bottom:0.8rem}
+.urgency-text{font-size:0.87rem;color:rgba(245,240,232,0.62);line-height:1.8}
+.urgency-cta{display:inline-block;margin-top:1rem;font-size:0.77rem;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.07em}
+
+/* AUTHORITY */
+#authority{background:#0a1a32}
+.authority-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;margin-top:4rem}
+.authority-text p{font-size:1rem;color:rgba(245,240,232,0.72);line-height:1.9;margin-bottom:1.5rem;font-weight:300}
+.authority-quote{border-left:2px solid var(--gold);padding:1.5rem 2rem;margin:2rem 0;background:rgba(201,168,76,0.05)}
+.authority-quote p{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;font-weight:300;color:var(--cream)!important;margin-bottom:0!important;line-height:1.5}
+.authority-quote cite{display:block;margin-top:0.8rem;font-family:'DM Sans',sans-serif;font-style:normal;font-size:0.79rem;color:var(--gold)}
+.authority-pillars{display:flex;flex-direction:column;gap:1.5rem}
+.pillar{display:flex;gap:1.5rem;align-items:flex-start;padding:1.5rem;border:1px solid var(--border);background:rgba(255,255,255,0.02);border-radius:2px;transition:all 0.3s}
+.pillar:hover{border-color:rgba(201,168,76,0.4);background:rgba(201,168,76,0.04)}
+.pillar-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);line-height:1;flex-shrink:0;width:2rem;text-align:center}
+.pillar-title{font-weight:600;font-size:0.95rem;color:var(--cream);margin-bottom:0.4rem}
+.pillar-desc{font-size:0.83rem;color:rgba(245,240,232,0.52);line-height:1.65}
+
+/* EXCLUSIVITY */
+#exclusivity{background:var(--navy);text-align:center}
+.exclusivity-box{max-width:760px;margin:3rem auto 0;border:1px solid var(--border);padding:4rem;background:rgba(201,168,76,0.03);position:relative}
+.exclusivity-box::before,.exclusivity-box::after{content:'';position:absolute;width:40px;height:40px;border-color:var(--gold);border-style:solid}
+.exclusivity-box::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.exclusivity-box::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+.exclusivity-qm{font-family:'Cormorant Garamond',serif;font-size:5rem;line-height:0.5;color:var(--teal);opacity:0.35;display:block;margin-bottom:1.5rem}
+.exclusivity-statement{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:300;line-height:1.5;color:var(--cream)}
+.exclusivity-statement strong{font-weight:600;color:var(--gold)}
+.exclusivity-fr{margin-top:1.5rem;font-size:0.88rem;font-style:italic;color:rgba(245,240,232,0.45);font-family:'Cormorant Garamond',serif}
+.exclusivity-badges{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+.badge{display:inline-flex;align-items:center;gap:0.4rem;border:1px solid var(--border);padding:0.4rem 0.9rem;font-size:0.74rem;letter-spacing:0.07em;text-transform:uppercase;color:rgba(245,240,232,0.55);border-radius:2px}
+.badge-teal{border-color:rgba(4,138,129,0.4);color:var(--teal-lt)}
+
+/* CTA */
+#cta{background:linear-gradient(135deg,var(--teal) 0%,#036860 100%);text-align:center;padding:6rem 4rem}
+#cta .section-title{color:var(--navy)}
+#cta .section-label{color:rgba(15,34,64,0.55)}
+.cta-desc{font-size:1rem;color:rgba(15,34,64,0.72);margin:1.5rem auto 2.5rem;max-width:560px;line-height:1.8}
+.cta-contact{display:flex;justify-content:center;gap:3rem;margin-top:3rem;flex-wrap:wrap}
+.contact-item{display:flex;flex-direction:column;align-items:center;gap:0.3rem}
+.contact-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(15,34,64,0.45);font-weight:600}
+.contact-value{font-size:0.95rem;color:var(--navy);font-weight:600;text-decoration:none}
+.contact-value:hover{text-decoration:underline}
+
+/* FOOTER */
+footer{background:#081020;padding:3rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);font-weight:600}
+.footer-copy{font-size:0.77rem;color:rgba(245,240,232,0.28);text-align:center;line-height:1.6}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:0.77rem;color:rgba(245,240,232,0.3);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  section,#hero{padding:5rem 1.5rem}
+  .hero-stats{gap:1.5rem}
+  .tunnel-grid{grid-template-columns:repeat(2,1fr)}
+  .services-intro,.authority-grid{grid-template-columns:1fr;gap:2.5rem}
+  .service-cards,.urgency-grid,.modules-grid{grid-template-columns:1fr}
+  .service-row-header{grid-template-columns:1fr;gap:1.5rem}
+  footer{flex-direction:column;text-align:center}
+  .exclusivity-box{padding:2rem}
+  .cta-contact{gap:1.5rem}
+}
+</style>
 </head>
 <body>
-  <h1>Bientôt en ligne : Site de Nicolas Kloska</h1>
-  <p>Expert en droit du travail, licenciements, harcèlement, accidents du travail, sécurité sociale.</p>
-  <p>Contact : [ton email ou LinkedIn]</p>
+
+<nav>
+  <a href="#hero" class="nav-logo">Nicolas Kloska</a>
+  <div class="nav-links">
+    <a href="#tunnel">Parcours</a>
+    <a href="#services">Services</a>
+    <a href="#urgency">2026</a>
+    <a href="#authority">Approche</a>
+    <a href="#exclusivity">Positionnement</a>
+    <a href="#cta" class="nav-cta">Discovery Call</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Caen &amp; Normandie &nbsp;·&nbsp; RGPD &amp; AI Act 2026</div>
+    <h1 class="hero-title">
+      L'IA au service de<br>
+      <em>votre performance</em><br>
+      <strong>juridique.</strong>
+    </h1>
+    <p class="hero-statement">
+      I specialize in AI consulting for independent labor law firms<br>
+      (2–20 lawyers) in Normandy, France.
+    </p>
+    <p class="hero-desc">
+      Je conçois des systèmes IA sur mesure pour les cabinets d'avocats en droit social de 2 à 20 avocats. Conformes RGPD &amp; AI Act. Déployés sans rupture d'activité. Rentables dès le premier mois.
+    </p>
+    <div class="hero-actions">
+      <a href="#cta" class="btn-primary">↗ Discovery Call gratuit · 30 min</a>
+      <a href="#services" class="btn-secondary">Découvrir les services</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">43k€</div><div class="stat-label">CA récupéré moyen / audit</div></div>
+      <div><div class="stat-num">+1h30</div><div class="stat-label">libérée / avocat / jour</div></div>
+      <div><div class="stat-num">50%</div><div class="stat-label">cofinancé BPI France</div></div>
+      <div><div class="stat-num">48h</div><div class="stat-label">charte AI Act conforme</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TUNNEL -->
+<section id="tunnel">
+  <div class="section-label">Parcours client</div>
+  <h2 class="section-title">Un chemin clair,<br><em>à votre rythme.</em></h2>
+  <div class="tunnel-grid reveal">
+    <div class="tunnel-step"><div class="tunnel-step-tag">Gratuit</div><div class="tunnel-step-name">Session Découverte</div><div class="tunnel-step-price">0 €</div><div class="tunnel-arrow">›</div></div>
+    <div class="tunnel-step"><div class="tunnel-step-tag">Entry</div><div class="tunnel-step-name">Diagnostic Cabinet</div><div class="tunnel-step-price">490 – 990 €</div><div class="tunnel-arrow">›</div></div>
+    <div class="tunnel-step"><div class="tunnel-step-tag">Core</div><div class="tunnel-step-name">Email Intelligence</div><div class="tunnel-step-price">3 500 – 7 000 €</div><div class="tunnel-arrow">›</div></div>
+    <div class="tunnel-step"><div class="tunnel-step-tag">Core+</div><div class="tunnel-step-name">Voix · Docs · Agent</div><div class="tunnel-step-price">2 500 – 8 000 €</div><div class="tunnel-arrow">›</div></div>
+    <div class="tunnel-step"><div class="tunnel-step-tag">Premium</div><div class="tunnel-step-name">AI Law Modernization</div><div class="tunnel-step-price">12 000 – 22 000 €</div><div class="tunnel-arrow">›</div></div>
+    <div class="tunnel-step"><div class="tunnel-step-tag">Retainer</div><div class="tunnel-step-name">Advisory Mensuel</div><div class="tunnel-step-price">590 – 990 € /mois</div></div>
+  </div>
+  <p style="margin-top:1.5rem;font-size:0.81rem;color:rgba(245,240,232,0.3);font-style:italic">Tous les honoraires sont des estimations indicatives. Chaque projet est personnalisé selon vos besoins et résultats attendus.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-intro">
+    <div>
+      <div class="section-label">Services</div>
+      <h2 class="section-title">Trois lignes.<br><em>Six offres.</em><br><strong>Un résultat.</strong></h2>
+    </div>
+    <p class="services-note">Le service menu est structuré en trois stades de maturité. Quel que soit votre point de départ — curiosité, action, ou transformation complète — il existe une offre taillée pour votre cabinet.</p>
+  </div>
+
+  <!-- ROW 1 -->
+  <div class="service-row reveal">
+    <div class="service-row-header">
+      <div>
+        <div class="section-label">Ligne 1</div>
+        <div class="service-row-label">Se mettre à niveau sur l'IA</div>
+        <p class="service-row-quote">« Je veux comprendre ce que l'IA peut faire pour mon cabinet en droit social, sans y passer des heures ni risquer mes données clients. »</p>
+      </div>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="card-icon">🔍</div>
+          <div class="card-title">Session de Découverte IA</div>
+          <div class="card-subtitle">Webinaire live ou présentiel · 1h30–2h · Jusqu'à 6 participants</div>
+          <ul class="card-features">
+            <li>Ce que l'IA fait vraiment pour un cabinet droit social en 2026</li>
+            <li>RGPD, secret professionnel &amp; AI Act : les 3 règles à connaître avant d'agir</li>
+            <li>Démonstration live : triage email juridique en temps réel</li>
+            <li>5 cas d'usage applicables dès la semaine suivante, sans outil payant</li>
+            <li>Feuille de route IA personnalisée 30 jours remise en fin de session</li>
+          </ul>
+          <div class="card-roi">📈 Équipe sensibilisée en 2h · Feuille de route 30 jours opérationnelle · 0 € d'outil nécessaire</div>
+          <div class="card-price">350 € – 750 €</div>
+          <div class="card-testimonial">"En 2h j'ai enfin compris pourquoi mes confrères parlaient d'IA. J'ai eu 5 idées concrètes pour mon cabinet ce même soir."<cite>— Avocat associé · Cabinet 4 avocats · Droit social · Caen</cite></div>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">⚡</div>
+          <div class="card-title">Workshop IA Juridique</div>
+          <div class="card-subtitle">Session journée complète · Présentiel ou remote · Jusqu'à 8 participants</div>
+          <ul class="card-features">
+            <li>Prompting juridique avancé : formuler des instructions précises à l'IA</li>
+            <li>Mise en place live d'un système de triage email sur vos vrais emails</li>
+            <li>Introduction répondeur vocal IA et transcription automatique d'appels</li>
+            <li>Génération en direct d'actes types : mise en demeure, convocation disciplinaire</li>
+            <li>Manuel personnalisé du cabinet remis à chaque participant</li>
+          </ul>
+          <div class="card-roi">📈 Économie de 8 à 12h/semaine dès le mois suivant · 3 automatisations actives en fin de journée</div>
+          <div class="card-price">1 200 € – 2 500 €</div>
+          <div class="card-testimonial">"Le workshop a transformé notre façon de travailler. Dès le lundi suivant, mon assistante traitait les emails deux fois plus vite avec l'IA."<cite>— Avocate associée · Cabinet 7 avocats · Droit du travail · Rouen</cite></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="service-row reveal">
+    <div class="service-row-header">
+      <div>
+        <div class="section-label">Ligne 2</div>
+        <div class="service-row-label">Identifier ses gains rapides</div>
+        <p class="service-row-quote">« Quelles sont mes priorités IA ? Où perdons-nous du temps et de l'argent chaque semaine ? Je veux agir vite et mesurer les résultats. »</p>
+      </div>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="card-icon">📊</div>
+          <div class="card-title">AI Cabinet Diagnostic</div>
+          <div class="card-subtitle">Engagement 1 semaine · Rapport PDF + présentation 60 min · Éligible BPI France</div>
+          <ul class="card-features">
+            <li>Audit de maturité IA sur 5 dimensions : flux, compétences, outils, données, gouvernance</li>
+            <li>Chiffrage précis du CA non facturé lié aux communications (exemple : 38 000 €/an)</li>
+            <li>Détection des délais CPH à risque dans vos processus actuels</li>
+            <li>Plan d'action 30–60–90 jours avec ROI estimé pour chaque action</li>
+            <li>Vérification de votre éligibilité au financement BPI France IA Booster (jusqu'à 50 %)</li>
+          </ul>
+          <div class="card-roi">📈 Cabinet de 5 avocats : 38 000 à 62 000 €/an de CA récupérable identifié en moyenne · ROI mission en 3 semaines</div>
+          <div class="card-price">490 € – 990 €</div>
+          <div class="card-bpi">✅ Financement BPI France jusqu'à 50 % remboursé</div>
+          <div class="card-testimonial">"Le diagnostic a révélé 43 000 € de facturation annuelle manquée. Je n'aurais jamais trouvé ça seul. La mission s'est remboursée en 10 jours."<cite>— Avocat associé-gérant · Cabinet 6 avocats · Droit social · Caen</cite></div>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">🗺️</div>
+          <div class="card-title">AI Roadmap &amp; Automatisation</div>
+          <div class="card-subtitle">Engagement 2–3 semaines · Plan de transformation 12 mois · Livrable clé en main</div>
+          <ul class="card-features">
+            <li>Diagnostic approfondi emails, voix, documents et communication digitale</li>
+            <li>Déploiement des premières automatisations à fort ROI (relances, triage, réponses types)</li>
+            <li>Priorisation des 5 chantiers IA classés par effort / gain / urgence</li>
+            <li>Budget IA 12 mois : coûts, économies projetées, seuil de rentabilité</li>
+            <li>Présentation associés clé en main : « Pourquoi l'IA maintenant »</li>
+          </ul>
+          <div class="card-roi">📈 15 à 20h économisées par avocat chaque semaine · Première automatisation active sous 10 jours</div>
+          <div class="card-price">1 800 € – 3 500 €</div>
+          <div class="card-testimonial">"La roadmap nous a permis de prioriser sans nous éparpiller. On a lancé 3 automatisations en 2 semaines. L'équipe est bluffée."<cite>— Directrice administrative · Cabinet 12 avocats · Normandie</cite></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="service-row reveal">
+    <div class="service-row-header">
+      <div>
+        <div class="section-label">Ligne 3</div>
+        <div class="service-row-label">Solutions sur mesure &amp; accompagnement continu</div>
+        <p class="service-row-quote">« Je veux que l'IA soit déployée correctement, utilisée par toute mon équipe, et qu'elle évolue avec mon cabinet et la réglementation. »</p>
+      </div>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="card-icon">🏗️</div>
+          <div class="card-title">Projets d'Implémentation IA</div>
+          <div class="card-subtitle">4 à 12 semaines · Modules combinables · Déploiement progressif</div>
+          <div class="modules-grid">
+            <div class="module-chip"><div class="module-chip-title">📧 Email Intelligence</div><div class="module-chip-price">3 500 – 7 000 €</div></div>
+            <div class="module-chip"><div class="module-chip-title">🎙️ Vocal Intelligence</div><div class="module-chip-price">2 500 – 5 000 €</div></div>
+            <div class="module-chip"><div class="module-chip-title">📋 Document Intelligence</div><div class="module-chip-price">2 500 – 5 500 €</div></div>
+            <div class="module-chip"><div class="module-chip-title">🤖 Copilot Avocat</div><div class="module-chip-price">4 000 – 8 000 €</div></div>
+            <div class="module-chip"><div class="module-chip-title">📣 Communication IA</div><div class="module-chip-price">1 500 – 3 500 €</div></div>
+            <div class="module-chip"><div class="module-chip-title">💬 Chatbot Cabinet</div><div class="module-chip-price">1 800 – 3 500 €</div></div>
+          </div>
+          <div class="bundle-box"><div class="bundle-title">🏆 AI Law Firm Modernization</div><div class="bundle-sub">Tous les modules en bundle · Éligible BPI France</div><div class="bundle-price">12 000 – 22 000 €</div></div>
+          <div class="card-roi">📈 Email Intelligence seul : +1h30 libérée par avocat par jour · 0 délai CPH manqué · CA récupéré dès le mois 1</div>
+          <div class="card-bpi">✅ Financement BPI France IA Booster disponible selon périmètre</div>
+          <div class="card-testimonial">"Le système email IA a changé notre quotidien. Je traite mes mails du matin en 20 minutes au lieu d'une heure et demie. Et j'ai récupéré 2 dossiers CPH que j'aurais manqués."<cite>— Avocate · Cabinet 3 avocats · Droit social · Caen</cite></div>
+        </div>
+        <div class="service-card">
+          <div class="card-icon">♾️</div>
+          <div class="card-title">AI Advisory Mensuel</div>
+          <div class="card-subtitle">Partenariat mensuel renouvelable · Disponible après toute mission d'implémentation</div>
+          <ul class="card-features">
+            <li>1 appel stratégique mensuel (45 min) : bilan, ajustements, nouvelles opportunités IA</li>
+            <li>Veille IA juridique mensuelle : nouveaux outils, RGPD, AI Act 2026, jurisprudence IA</li>
+            <li>Optimisation continue de vos workflows emails, voix et documents</li>
+            <li>Rapport mensuel de performance : temps économisé, CA récupéré, KPIs actifs</li>
+            <li>1 à 2 nouveaux cas d'usage proposés chaque trimestre</li>
+            <li>Support prioritaire : réponse sous 4h par email ou téléphone</li>
+          </ul>
+          <div class="card-roi">📈 Valeur générée chaque mois supérieure aux honoraires dès le 2e mois · Cabinet qui ne décroche jamais</div>
+          <div class="card-price">590 € – 990 € / mois</div>
+          <div class="card-testimonial">"Le retainer mensuel c'est notre tranquillité d'esprit. Nicolas suit tout, nous alerte sur les évolutions réglementaires et trouve toujours un nouveau gain. Indispensable."<cite>— Associé gérant · Cabinet 9 avocats · Droit social &amp; RH · Normandie</cite></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2026 -->
+<section id="urgency">
+  <div class="section-label">Ce qui change en 2026</div>
+  <h2 class="section-title">Trois raisons<br><em>d'agir maintenant.</em></h2>
+  <div class="urgency-grid reveal">
+    <div class="urgency-card">
+      <div class="urgency-icon">⚖️</div>
+      <div class="urgency-title">AI Act Européen</div>
+      <p class="urgency-text">Entré en application en 2026, l'AI Act impose des obligations documentaires aux cabinets utilisant l'IA. Votre conformité doit être tracée dès aujourd'hui. Chaque semaine sans charte IA est une exposition croissante.</p>
+      <div class="urgency-cta">Nicolas vous prépare une charte IA cabinet conforme en 48h →</div>
+    </div>
+    <div class="urgency-card">
+      <div class="urgency-icon">🤖</div>
+      <div class="urgency-title">Agents IA Autonomes</div>
+      <p class="urgency-text">Les Copilots Avocat de 2026 ne se contentent plus de répondre — ils anticipent, préparent vos audiences et suivent vos dossiers de façon proactive. Les cabinets qui déploient maintenant auront 18 mois d'avance.</p>
+      <div class="urgency-cta">Votre Copilot Avocat personnalisé disponible en 4 semaines →</div>
+    </div>
+    <div class="urgency-card">
+      <div class="urgency-icon">💰</div>
+      <div class="urgency-title">Financement BPI France</div>
+      <p class="urgency-text">Le programme IA Booster France 2030 cofinance jusqu'à 50 % de votre projet. La fenêtre de financement est limitée — chaque mois sans dossier BPI est un manque à gagner direct.</p>
+      <div class="urgency-cta">Éligibilité vérifiée gratuitement lors de votre Discovery Call →</div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORITY -->
+<section id="authority">
+  <div class="section-label">L'approche</div>
+  <h2 class="section-title">Architecte de performance,<br><em>pas installateur d'outils.</em></h2>
+  <div class="authority-grid">
+    <div class="authority-text">
+      <p>En 2026, l'IA est devenue une norme dans les grandes structures juridiques. Pour les cabinets indépendants en droit social, elle représente une opportunité unique de compétitivité — ou un risque de décrochage si elle n'est pas déployée correctement.</p>
+      <p>Je ne vends pas Legora, ChatGPT ou Zapier. Je conçois des <strong style="color:var(--gold)">systèmes de performance juridique</strong> qui intègrent les meilleurs outils du marché, dans le respect du RGPD, du secret professionnel, et de l'AI Act 2026.</p>
+      <div class="authority-quote">
+        <p>« Mon travail existe uniquement pour aider les cabinets à améliorer leur performance juridique. La technologie est le moyen de l'implémenter. »</p>
+        <cite>— Nicolas Kloska, Mars 2026</cite>
+      </div>
+      <p>Chaque système que je déploie intègre des points de contrôle humains obligatoires, une traçabilité complète, et une gouvernance IA documentée. Vous gardez le contrôle. L'IA amplifie.</p>
+    </div>
+    <div class="authority-pillars">
+      <div class="pillar"><div class="pillar-num">01</div><div><div class="pillar-title">Clarté Stratégique avant tout outil</div><div class="pillar-desc">Je commence toujours par comprendre vos flux, vos douleurs et vos objectifs avant de toucher au moindre paramètre. La technologie suit la stratégie, jamais l'inverse.</div></div></div>
+      <div class="pillar"><div class="pillar-num">02</div><div><div class="pillar-title">Conformité RGPD &amp; AI Act intégrée</div><div class="pillar-desc">Chaque déploiement inclut une charte IA cabinet, un registre des traitements IA, et une classification des risques selon l'AI Act. Pas en option — dans le standard.</div></div></div>
+      <div class="pillar"><div class="pillar-num">03</div><div><div class="pillar-title">Résultats chiffrés ou on ajuste</div><div class="pillar-desc">Chaque mission produit un rapport de performance : temps économisé, CA récupéré, délais évités, KPIs actifs. Si les résultats ne sont pas là, on ajuste le système ensemble.</div></div></div>
+      <div class="pillar"><div class="pillar-num">04</div><div><div class="pillar-title">Votre langue, votre pratique</div><div class="pillar-desc">CPH, mise en demeure, rupture conventionnelle, secret professionnel — je parle droit social. Vos équipes ne passent pas par un traducteur entre leur pratique et la technologie.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCLUSIVITY -->
+<section id="exclusivity">
+  <div class="section-label">Positionnement</div>
+  <h2 class="section-title">Un spécialiste,<br><em>pas un généraliste.</em></h2>
+  <div class="exclusivity-box reveal">
+    <span class="exclusivity-qm">"</span>
+    <p class="exclusivity-statement">I specialize in AI consulting for <strong>independent labor law firms</strong> (2–20 lawyers) <strong>in Normandy, France.</strong></p>
+    <p class="exclusivity-fr">« Je suis spécialiste du conseil en IA pour les cabinets d'avocats indépendants en droit social (2–20 avocats) en Normandie. »</p>
+    <div class="exclusivity-badges">
+      <span class="badge badge-teal">✓ Droit Social uniquement</span>
+      <span class="badge badge-teal">✓ 2–20 avocats</span>
+      <span class="badge badge-teal">✓ Normandie · France</span>
+      <span class="badge">RGPD Compliant</span>
+      <span class="badge">AI Act 2026</span>
+      <span class="badge">BPI France Éligible</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="section-label">Prêt à transformer votre cabinet ?</div>
+  <h2 class="section-title">Réservez votre<br><em>Discovery Call gratuit.</em></h2>
+  <p class="cta-desc">30 minutes. Sans engagement. Nous identifions ensemble vos 3 gains IA prioritaires, vérifions votre éligibilité au financement BPI France, et dessinons votre première étape.</p>
+  <a href="mailto:contact@nicolaskloska.fr" class="btn-primary">↗ Réserver mon Discovery Call · Gratuit</a>
+  <div class="cta-contact">
+    <div class="contact-item"><span class="contact-label">Email</span><a href="mailto:contact@nicolaskloska.fr" class="contact-value">contact@nicolaskloska.fr</a></div>
+    <div class="contact-item"><span class="contact-label">Site</span><a href="https://www.nicolaskloska.fr" class="contact-value">www.nicolaskloska.fr</a></div>
+    <div class="contact-item"><span class="contact-label">LinkedIn</span><a href="https://linkedin.com/in/nicolaskloska" class="contact-value">/in/nicolaskloska</a></div>
+    <div class="contact-item"><span class="contact-label">Zone</span><span class="contact-value">Caen &amp; Normandie</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Nicolas Kloska</div>
+  <p class="footer-copy">© 2026 Nicolas Kloska · Consultant IA Juridique · Caen &amp; Normandie<br>Déploiements conformes RGPD &amp; AI Act 2026</p>
+  <div class="footer-links">
+    <a href="#services">Services</a>
+    <a href="#exclusivity">Positionnement</a>
+    <a href="#cta">Contact</a>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.padding = window.scrollY > 60 ? '0.75rem 4rem' : '1.2rem 4rem';
+});
+</script>
 </body>
 </html>
