@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Build/output folders (si tu ajoutes un jour un builder)
+dist/
+build/
+node_modules/
