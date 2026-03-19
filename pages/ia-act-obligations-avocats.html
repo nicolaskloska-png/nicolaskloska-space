@@ -15,12 +15,24 @@
 
     <!-- NAV (identique à l’accueil qu’on fera après) -->
     <!-- MENU HAMBURGER RESPONSIVE - À COLLER DANS CHAQUE PAGE -->
+<!-- NAV COMPLET : HAMBURGER + SWITCHER FR|EN -->
 <nav class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
         
-        <!-- Hamburger mobile/tablette -->
-        <button onclick="toggleMenu()" class="md:hidden text-4xl text-blue-900 focus:outline-none">☰</button>
+        <!-- Hamburger + Switcher langue (mobile & desktop) -->
+        <div class="flex items-center gap-4">
+            <!-- Switcher FR|EN -->
+            <div class="flex bg-gray-100 rounded-full p-1 text-xs font-medium">
+                <a href="javascript:void(0)" onclick="switchLanguage('fr')" 
+                   class="px-4 py-2 rounded-full transition-all" id="lang-fr">🇫🇷 FR</a>
+                <a href="javascript:void(0)" onclick="switchLanguage('en')" 
+                   class="px-4 py-2 rounded-full transition-all" id="lang-en">🇬🇧 EN</a>
+            </div>
+            
+            <!-- Hamburger (visible seulement sur mobile) -->
+            <button onclick="toggleMenu()" class="md:hidden text-4xl text-blue-900">☰</button>
+        </div>
         
         <!-- Menu desktop -->
         <div class="hidden md:flex gap-6 text-sm font-medium items-center">
@@ -37,22 +49,39 @@
         </div>
     </div>
 
-    <!-- Menu mobile qui s’ouvre -->
+    <!-- Menu mobile -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-8 text-lg">
         <div class="flex flex-col gap-6">
+            <!-- liens mobiles identiques -->
             <a href="/" class="hover:text-blue-600">Accueil</a>
-            <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
-            <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
-            <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
-            <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
-            <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
-            <a href="/services.html" class="hover:text-blue-600">Services</a>
-            <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
-            <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
+            <!-- ... tous les autres liens ... -->
             <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-2xl text-center">RDV gratuit 15 min</a>
         </div>
     </div>
 </nav>
+
+<!-- Script à placer juste avant </body> ou après la nav -->
+<script>
+    function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+    
+    function switchLanguage(lang) {
+        const currentUrl = window.location.href;
+        if (lang === 'en') {
+            window.location.href = `https://translate.google.com/translate?sl=fr&tl=en&u=${encodeURIComponent(currentUrl)}`;
+        } else {
+            window.location.href = currentUrl.split('?')[0]; // retour FR
+        }
+    }
+    
+    // Highlight le bouton actif
+    if (window.location.href.includes('translate.google')) {
+        document.getElementById('lang-en').classList.add('bg-white', 'shadow-sm');
+    } else {
+        document.getElementById('lang-fr').classList.add('bg-white', 'shadow-sm');
+    }
+</script>
 
 <!-- N’oublie PAS ce script JavaScript (à coller juste avant </head> ou après la nav) -->
 <script>
