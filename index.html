@@ -1,134 +1,257 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie • Nicolas Kloska</title>
-    <meta name="description" content="Consultant IA Juridique certifié. Audit AI Act 2026, charte IA, formation et protection risques prud’homaux. Discovery Call gratuit 15 min.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function switchLanguage(lang) {
-            const url = window.location.href;
-            if (lang === 'en') {
-                window.open(`https://translate.google.com/translate?sl=fr&tl=en&u=${encodeURIComponent(url)}`, '_blank');
-            } else {
-                window.location.href = url.split('?')[0];
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas Kloska | Consultant IA Juridique • Cabinets d'Avocats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0a1729 0%, #1e2937 100%); }
+    .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4); }
+  </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-900">
+<body class="bg-zinc-950 text-white">
 
-    <!-- HEADER FIXE -->
-    <header class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-3xl font-bold text-blue-900">Nicolas Kloska</a>
-            <div class="flex bg-gray-100 rounded-full p-1 text-sm font-medium">
-                <button onclick="switchLanguage('fr')" class="px-5 py-2 rounded-full bg-white shadow-sm">🇫🇷 FR</button>
-                <button onclick="switchLanguage('en')" class="px-5 py-2 rounded-full hover:bg-white">🇬🇧 EN</button>
-            </div>
-            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-2xl font-semibold">RDV gratuit 15 min</a>
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-lg border-b border-zinc-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center text-xl font-bold">NK</div>
+        <div>
+          <span class="font-semibold text-2xl tracking-tighter">Nicolas Kloska</span>
+          <span class="text-xs block text-blue-400 -mt-1">IA JURIDIQUE</span>
         </div>
-    </header>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#expertises" class="hover:text-blue-400 transition">Expertises</a>
+        <a href="#services" class="hover:text-blue-400 transition">Services</a>
+        <a href="#ressources" class="hover:text-blue-400 transition">Ressources</a>
+        <a href="#resultats" class="hover:text-blue-400 transition">Résultats</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-xs px-3 py-1 bg-zinc-900 rounded-full border border-zinc-700">🇫🇷 FR</span>
+        <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank"
+           class="bg-white text-zinc-950 px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:bg-blue-400 hover:text-white transition">
+          <i class="fa-solid fa-calendar"></i> RDV 15 min gratuit
+        </a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-32 text-center">
-        <h1 class="text-6xl font-bold mb-8 leading-tight">Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie</h1>
-        <p class="text-3xl max-w-4xl mx-auto">Je sécurise votre cabinet contre l’AI Act 2026. Audit, charte IA, formation et protection risques prud’homaux.</p>
-        <a href="#contact" class="mt-12 inline-block bg-white text-blue-900 px-12 py-5 rounded-3xl text-2xl font-bold">Prendre RDV gratuit maintenant</a>
-    </section>
+  <!-- HERO -->
+  <header class="hero-bg pt-32 pb-24 text-center">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 rounded-3xl px-5 py-2 text-sm mb-8">
+        <span class="text-emerald-400">●</span> IWAI AICP Certified • Spécialiste AI Act
+      </div>
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-8">
+        Je sécurise votre cabinet<br>contre l’AI Act 2026
+      </h1>
+      <p class="text-2xl text-zinc-400 max-w-2xl mx-auto mb-10">
+        Audit • Charte IA • Formation • Protection risques prud’homaux<br>
+        <span class="text-blue-400">Intervention locale Normandie (Caen / Rouen) • Cabinets 2–20 avocats</span>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank"
+           class="bg-blue-600 hover:bg-blue-500 px-10 py-5 rounded-3xl text-lg font-semibold flex items-center justify-center gap-3 transition">
+          Prendre RDV gratuit maintenant
+        </a>
+        <a href="#services" class="border border-zinc-700 hover:border-white px-8 py-5 rounded-3xl text-lg font-medium flex items-center justify-center gap-3 transition">
+          Découvrir les services
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <!-- RÉSUMÉ EXPERT -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
-            <div class="p-8 bg-gray-50 rounded-3xl text-xl">IWAI AICP Certified • Spécialiste AI Act</div>
-            <div class="p-8 bg-gray-50 rounded-3xl text-xl">Intervention locale Normandie (Caen / Rouen)</div>
-            <div class="p-8 bg-gray-50 rounded-3xl text-xl">Cabinets 2–20 avocats • ROI mesuré en 30 jours</div>
+  <!-- RISQUES -->
+  <section class="py-20 bg-zinc-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Les risques juridiques IA en 2026</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-zinc-950 border border-red-900/50 rounded-3xl p-8 card-hover">
+          <p class="text-red-400 text-3xl mb-4">⚠️ Amendes jusqu’à 7 % du CA</p>
         </div>
-    </section>
-
-    <!-- RISQUES -->
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Les risques juridiques IA en 2026</h2>
-            <ul class="grid md:grid-cols-2 gap-6 text-lg">
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Amendes jusqu’à 7 % du CA</li>
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Responsabilité pleine de l’avocat</li>
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Discrimination algorithmique</li>
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Nullité des actes</li>
-            </ul>
+        <div class="bg-zinc-950 border border-red-900/50 rounded-3xl p-8 card-hover">
+          <p class="text-red-400 text-3xl mb-4">⚠️ Responsabilité pleine de l’avocat</p>
         </div>
-    </section>
-
-    <!-- LES 5 EXPERTISES (scroll long et détaillé) -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">Mes 5 Expertises IA Juridique</h2>
-            <div class="space-y-20">
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">1. IA Act : obligations pour les cabinets</h3>
-                    <p class="text-lg">Les cabinets sont des « deployers ». Cartographie obligatoire, supervision humaine, DPIA pour haut risque. Tableau comparatif + sources officielles + méthodologie publique.</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">2. Comment sécuriser l’usage de l’IA</h3>
-                    <p class="text-lg">Les 5 piliers (gouvernance, formation, outils souverains, documentation, contrôle humain) + exemples concrets.</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">3. Responsabilité juridique en cas d’erreur IA</h3>
-                    <p class="text-lg">L’avocat reste 100 % responsable. Tableau risques vs mesures + exemples jurisprudence.</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">4. IA & risques prud’homaux</h3>
-                    <p class="text-lg">Nullité de licenciement, calculs erronés, contestation délais. Grille d’analyse complète.</p>
-                </div>
-                <div>
-                    <h3 class="text-3xl font-bold mb-4">5. IA & discrimination algorithmique</h3>
-                    <p class="text-lg">Interdiction absolue + audit biais obligatoire. Tableau obligations employeurs.</p>
-                </div>
-            </div>
+        <div class="bg-zinc-950 border border-red-900/50 rounded-3xl p-8 card-hover">
+          <p class="text-red-400 text-3xl mb-4">⚠️ Discrimination algorithmique</p>
         </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Mes Services pour votre cabinet</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow">Audit IA juridique + Conformité AI Act (490–990 €)</div>
-                <div class="bg-white p-8 rounded-3xl shadow">Sécurisation des usages IA (1 290 €)</div>
-                <div class="bg-white p-8 rounded-3xl shadow">Formation IA pour avocats (690 €)</div>
-                <div class="bg-white p-8 rounded-3xl shadow">Accompagnement RH & IA (retainer mensuel)</div>
-            </div>
+        <div class="bg-zinc-950 border border-red-900/50 rounded-3xl p-8 card-hover">
+          <p class="text-red-400 text-3xl mb-4">⚠️ Nullité des actes</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- KNOWLEDGE BASE -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Knowledge Base IA Juridique</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 rounded-3xl">
-                    <h3 class="font-semibold">Charte IA + Registre</h3>
-                    <p class="text-gray-600">Extrait public. Version complète protégée :</p>
-                    <a href="https://drive.google.com/file/d/VOTRE-LIEN-CHARTE" target="_blank" class="block mt-4 bg-blue-600 text-white py-4 rounded-2xl text-center">Accéder à la version complète</a>
-                </div>
-                <!-- Répète pour les 11 autres documents (Checklist Biais, etc.) -->
-            </div>
+  <!-- EXPERTISES -->
+  <section id="expertises" class="py-24 max-w-6xl mx-auto px-6">
+    <h2 class="text-5xl font-bold text-center mb-16">Mes 5 Expertises IA Juridique</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Carte 1 -->
+      <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+        <h3 class="text-2xl font-semibold mb-4">1. IA Act : obligations pour les cabinets</h3>
+        <p class="text-zinc-400 mb-6">Les cabinets sont des « deployers ». Cartographie obligatoire, supervision humaine, DPIA pour haut risque. Tableau comparatif + sources officielles + méthodologie publique.</p>
+      </div>
+      <!-- Carte 2 -->
+      <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+        <h3 class="text-2xl font-semibold mb-4">2. Comment sécuriser l’usage de l’IA</h3>
+        <p class="text-zinc-400 mb-6">Les 5 piliers (gouvernance, formation, outils souverains, documentation, contrôle humain) + exemples concrets.</p>
+      </div>
+      <!-- Carte 3 -->
+      <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+        <h3 class="text-2xl font-semibold mb-4">3. Responsabilité juridique en cas d’erreur IA</h3>
+        <p class="text-zinc-400 mb-6">L’avocat reste 100 % responsable. Tableau risques vs mesures + exemples jurisprudence.</p>
+      </div>
+      <!-- Carte 4 -->
+      <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+        <h3 class="text-2xl font-semibold mb-4">4. IA & risques prud’homaux</h3>
+        <p class="text-zinc-400 mb-6">Nullité de licenciement, calculs erronés, contestation délais. Grille d’analyse complète.</p>
+      </div>
+      <!-- Carte 5 -->
+      <div class="bg-zinc-900 rounded-3xl p-8 card-hover">
+        <h3 class="text-2xl font-semibold mb-4">5. IA & discrimination algorithmique</h3>
+        <p class="text-zinc-400 mb-6">Interdiction absolue + audit biais obligatoire. Tableau obligations employeurs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 bg-zinc-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Mes Services pour votre cabinet</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-zinc-950 rounded-3xl p-8 card-hover border border-zinc-800">
+          <div class="text-emerald-400 text-sm font-medium mb-2">GRATUIT</div>
+          <h3 class="text-2xl font-semibold">Discovery Call</h3>
+          <p class="text-5xl font-bold my-4">15 min • 0 €</p>
+          <ul class="space-y-3 text-zinc-400">
+            <li>✓ Diagnostic rapide de vos usages IA</li>
+            <li>✓ Identification des risques immédiats</li>
+            <li>✓ Plan d’action personnalisé</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 bg-blue-900 text-white text-center">
-        <h2 class="text-4xl font-bold mb-8">Prenez rendez-vous</h2>
-        <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="inline-block bg-white text-blue-900 px-12 py-6 rounded-3xl text-2xl font-bold">Ouvrir Calendly maintenant →</a>
-        <div class="mt-8">
-            <a href="mailto:nicolaskloska@gmail.com?subject=Demande d’accompagnement IA Juridique..." class="text-white underline">Ou écrire par email (message pré-rempli)</a>
+        <div class="bg-zinc-950 rounded-3xl p-8 card-hover border border-blue-600 relative">
+          <div class="absolute -top-3 right-6 bg-blue-600 text-xs px-4 py-1 rounded-full">LE PLUS DEMANDÉ</div>
+          <h3 class="text-2xl font-semibold">Audit IA juridique + Conformité AI Act</h3>
+          <p class="text-5xl font-bold my-4">490–990 €</p>
+          <ul class="space-y-3 text-zinc-400">
+            <li>✓ Cartographie complète + charte IA en 48h</li>
+            <li>✓ DPIA si haut risque</li>
+            <li>✓ Éligible BPI 50 % • ROI en 30 jours</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <p>© 2026 Nicolas Kloska – Consultant IA Juridique Normandie</p>
-    </footer>
+        <div class="bg-zinc-950 rounded-3xl p-8 card-hover border border-zinc-800">
+          <h3 class="text-2xl font-semibold">Sécurisation des usages IA</h3>
+          <p class="text-5xl font-bold my-4">1 290 €</p>
+          <ul class="space-y-3 text-zinc-400">
+            <li>✓ Outils souverains + registre RGPD</li>
+            <li>✓ Contrôle humain obligatoire</li>
+            <li>✓ Protection responsabilité pleine</li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-950 rounded-3xl p-8 card-hover border border-zinc-800">
+          <h3 class="text-2xl font-semibold">Formation IA pour avocats & assistants</h3>
+          <p class="text-5xl font-bold my-4">690 € (2h)</p>
+          <ul class="space-y-3 text-zinc-400">
+            <li>✓ En présentiel Normandie ou visio</li>
+            <li>✓ Exemples droit du travail concrets</li>
+            <li>✓ Attestation + support post-formation</li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-950 rounded-3xl p-8 card-hover border border-zinc-800">
+          <h3 class="text-2xl font-semibold">Accompagnement RH & IA</h3>
+          <p class="text-5xl font-bold my-4">Retainer mensuel</p>
+          <ul class="space-y-3 text-zinc-400">
+            <li>✓ Suivi mensuel + alertes jurisprudences</li>
+            <li>✓ Audit biais discrimination</li>
+            <li>✓ +1h30/jour de productivité gagnée</li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-950 rounded-3xl p-8 card-hover border border-zinc-800">
+          <h3 class="text-2xl font-semibold">Roadmap & Projets sur mesure</h3>
+          <p class="text-5xl font-bold my-4">Sur devis</p>
+          <ul class="space-y-3 text-zinc-400">
+            <li>✓ Workshop + charte IA complète</li>
+            <li>✓ Accompagnement 3–6 mois</li>
+            <li>✓ Résultats : ex. 43k€ CA récupéré</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ INTERACTIF -->
+  <section class="py-24 max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Évaluez instantanément votre risque IA Act</h2>
+    <div id="quiz" class="bg-zinc-900 rounded-3xl p-10">
+      <p class="text-xl mb-6">Quel est votre usage IA principal ?</p>
+      <div class="grid grid-cols-2 gap-4">
+        <button onclick="answerQuiz('recrutement')" class="bg-zinc-800 hover:bg-blue-600 p-6 rounded-2xl text-left transition">Recrutement & évaluation</button>
+        <button onclick="answerQuiz('licenciement')" class="bg-zinc-800 hover:bg-blue-600 p-6 rounded-2xl text-left transition">Licenciement & calculs indemnités</button>
+      </div>
+      <div id="quiz-result" class="mt-10 hidden text-center text-2xl font-medium"></div>
+    </div>
+  </section>
+
+  <!-- RESSOURCES -->
+  <section id="ressources" class="py-24 bg-zinc-950">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Knowledge Base IA Juridique</h2>
+      <p class="text-xl text-zinc-400 mb-12">Charte IA + Registre RGPD • Version complète protégée</p>
+      <a href="https://drive.google.com/file/d/VOTRE-LIEN-CHARTE" target="_blank"
+         class="inline-flex items-center gap-3 bg-white text-zinc-950 px-12 py-6 rounded-3xl text-xl font-semibold">
+        Accéder à la version complète <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- RÉSULTATS -->
+  <section id="resultats" class="py-24 max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Résultats concrets pour nos cabinets</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-6xl font-bold text-emerald-400">+43k€</div>
+        <p class="mt-4 text-zinc-400">CA récupéré grâce à une charte IA solide</p>
+      </div>
+      <div class="text-center">
+        <div class="text-6xl font-bold text-emerald-400">+1h30</div>
+        <p class="mt-4 text-zinc-400">par jour de productivité gagnée</p>
+      </div>
+      <div class="text-center">
+        <div class="text-6xl font-bold text-emerald-400">0</div>
+        <p class="mt-4 text-zinc-400">sanction AI Act à ce jour</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-16 border-t border-zinc-800">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-zinc-500">Nicolas Kloska • Consultant IA Juridique • Normandie</p>
+      <p class="text-xs text-zinc-600 mt-8">© 2026 • Tous droits réservés • <a href="mailto:nicolaskloska@gmail.com" class="hover:text-white">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function answerQuiz(type) {
+      const result = document.getElementById('quiz-result');
+      if (type === 'recrutement') {
+        result.innerHTML = `Risque ÉLEVÉ<br><span class="text-red-400">DPIA obligatoire + oversight humain</span><br><a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" class="mt-6 inline-block bg-red-600 px-8 py-4 rounded-2xl text-white">Réserver un Audit maintenant</a>`;
+      } else {
+        result.innerHTML = `Risque CRITIQUE<br><span class="text-red-400">Nullité possible du licenciement</span><br><a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" class="mt-6 inline-block bg-red-600 px-8 py-4 rounded-2xl text-white">Réserver un Audit maintenant</a>`;
+      }
+      result.classList.remove('hidden');
+    }
+    // Tailwind script already loaded
+  </script>
 </body>
 </html>
