@@ -6,27 +6,65 @@
     <title>Contact & Prendre RDV – Consultant IA Juridique Normandie</title>
     <meta name="description" content="Prenez RDV gratuit 15 min avec votre Consultant IA Juridique Normandie. Accompagnement personnalisé AI Act, audit et sécurisation pour votre cabinet d’avocats en droit du travail.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Nicolas Kloska - Consultant IA Juridique",
-      "url": "https://nicolaskloska.space",
-      "description": "Accompagnement maximal IA Juridique pour cabinets d’avocats en droit du travail en Normandie",
-      "email": "nicolaskloska@gmail.com"
-    }
+    <script>
+        // Hamburger menu mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
     </script>
 </head>
-<body>
-    <!-- NAV -->
-    <section class="max-w-4xl mx-auto px-6 py-20">
-        <h1 class="text-4xl font-bold text-center mb-8">Prenez rendez-vous (15 min gratuit)</h1>
-        <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="block text-center bg-blue-600 text-white px-12 py-6 rounded-3xl text-2xl font-bold">Ouvrir Calendly maintenant →</a>
-        
-        <div class="mt-12 text-center">
-            <a href="mailto:nicolaskloska@gmail.com?subject=Demande d’accompagnement IA Juridique pour mon cabinet d’avocats&body=Bonjour Nicolas,%0D%0A%0D%0AJe suis avocat en droit du travail et je souhaite bénéficier de votre accompagnement expert et maximal pour sécuriser mon cabinet contre l’AI Act 2026.%0D%0A%0D%0A• Taille du cabinet : ___ avocats%0D%0A• Ville (Normandie) : ___%0D%0A%0D%0AJe suis particulièrement intéressé par :%0D%0A- Audit complet IA Act + conformité%0D%0A- Charte IA personnalisée%0D%0A- Formation dédiée au cabinet%0D%0A- Protection contre les risques prud’homaux et discrimination algorithmique%0D%0A%0D%0AVotre accompagnement concret et sur-mesure m’intéresse au plus haut point.%0D%0AMerci d’avance pour votre réponse rapide !">Ou écrire directement par email (message pré-rempli)</a>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <!-- NAV MOBILE-FRIENDLY -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
+            
+            <!-- Hamburger (visible uniquement sur mobile) -->
+            <button onclick="toggleMenu()" class="md:hidden text-3xl focus:outline-none">☰</button>
+            
+            <!-- Menu desktop (caché sur mobile) -->
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="/" class="hover:text-blue-600">Accueil</a>
+                <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
+                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
+                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
+                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
+                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
+                <a href="/services.html" class="hover:text-blue-600">Services</a>
+                <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
+                <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
+                <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">RDV gratuit</a>
+            </div>
         </div>
+
+        <!-- Menu mobile (s’ouvre au clic) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-6 text-lg">
+            <div class="flex flex-col gap-6">
+                <a href="/" class="hover:text-blue-600">Accueil</a>
+                <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
+                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
+                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
+                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
+                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
+                <a href="/services.html" class="hover:text-blue-600">Services</a>
+                <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
+                <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
+                <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-xl text-center">RDV gratuit 15 min</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Le reste de ta page contact reste identique -->
+    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl font-bold mb-8">Prenez rendez-vous (Discovery Call gratuit 15 min)</h1>
+        <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="inline-block bg-blue-600 text-white px-12 py-6 rounded-3xl text-2xl font-bold hover:bg-blue-700">Ouvrir Calendly maintenant →</a>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-8 text-center text-sm">
+        <p>© 2026 Nicolas Kloska – Consultant IA Juridique Normandie</p>
+    </footer>
 </body>
 </html>
