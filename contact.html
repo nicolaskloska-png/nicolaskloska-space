@@ -17,44 +17,52 @@
 <body class="bg-gray-50 font-sans text-gray-900">
 
     <!-- NAV MOBILE-FRIENDLY -->
-    <nav class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
-            
-            <!-- Hamburger (visible uniquement sur mobile) -->
-            <button onclick="toggleMenu()" class="md:hidden text-3xl focus:outline-none">☰</button>
-            
-            <!-- Menu desktop (caché sur mobile) -->
-            <div class="hidden md:flex gap-6 text-sm font-medium">
-                <a href="/" class="hover:text-blue-600">Accueil</a>
-                <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
-                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
-                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
-                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
-                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
-                <a href="/services.html" class="hover:text-blue-600">Services</a>
-                <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
-                <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
-                <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">RDV gratuit</a>
-            </div>
+    <!-- MENU HAMBURGER RESPONSIVE - À COLLER DANS CHAQUE PAGE -->
+<nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
+        
+        <!-- Hamburger mobile/tablette -->
+        <button onclick="toggleMenu()" class="md:hidden text-4xl text-blue-900 focus:outline-none">☰</button>
+        
+        <!-- Menu desktop -->
+        <div class="hidden md:flex gap-6 text-sm font-medium items-center">
+            <a href="/" class="hover:text-blue-600">Accueil</a>
+            <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
+            <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
+            <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
+            <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
+            <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
+            <a href="/services.html" class="hover:text-blue-600">Services</a>
+            <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
+            <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
+            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">RDV gratuit</a>
         </div>
+    </div>
 
-        <!-- Menu mobile (s’ouvre au clic) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-6 text-lg">
-            <div class="flex flex-col gap-6">
-                <a href="/" class="hover:text-blue-600">Accueil</a>
-                <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
-                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
-                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
-                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
-                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
-                <a href="/services.html" class="hover:text-blue-600">Services</a>
-                <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
-                <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
-                <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-xl text-center">RDV gratuit 15 min</a>
-            </div>
+    <!-- Menu mobile qui s’ouvre -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-8 text-lg">
+        <div class="flex flex-col gap-6">
+            <a href="/" class="hover:text-blue-600">Accueil</a>
+            <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
+            <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
+            <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
+            <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
+            <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
+            <a href="/services.html" class="hover:text-blue-600">Services</a>
+            <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
+            <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
+            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-2xl text-center">RDV gratuit 15 min</a>
         </div>
-    </nav>
+    </div>
+</nav>
+
+<!-- N’oublie PAS ce script JavaScript (à coller juste avant </head> ou après la nav) -->
+<script>
+    function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+</script>
 
     <!-- Le reste de ta page contact reste identique -->
     <section class="max-w-4xl mx-auto px-6 py-20 text-center">
