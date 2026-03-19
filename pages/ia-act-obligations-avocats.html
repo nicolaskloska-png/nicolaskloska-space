@@ -2,46 +2,88 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IA Act : obligations pour les cabinets d’avocats en droit du travail en 2026</title>
+    <meta name="description" content="Obligations AI Act pour les cabinets d’avocats en droit du travail (Normandie). Deployers à haut risque : cartographie, supervision humaine, DPIA obligatoire dès août 2026. Audit IA juridique par Nicolas Kloska.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        table { border-collapse: collapse; }
+        th, td { padding: 1rem; border: 1px solid #d1d5db; }
+    </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Même NAV que index.html -->
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <!-- NAV (identique à l’accueil qu’on fera après) -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="/" class="hover:text-blue-600">Accueil</a>
+                <a href="/pages/ia-act-obligations-avocats.html" class="text-blue-600 font-semibold">IA Act</a>
+                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
+                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
+                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
+                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
+                <a href="/services.html" class="hover:text-blue-600">Services</a>
+                <a href="/contact.html" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">RDV gratuit</a>
+            </div>
+        </div>
+    </nav>
 
     <section class="max-w-4xl mx-auto px-6 py-20">
-        <h1 class="text-4xl font-bold mb-8">IA Act : quelles obligations pour les cabinets d’avocats en droit du travail en 2026 ?</h1>
+        <h1 class="text-4xl font-bold leading-tight mb-8">IA Act : quelles obligations pour les cabinets d’avocats en droit du travail en 2026 ?</h1>
         
-        <p class="text-2xl leading-relaxed mb-12">Les cabinets sont des « deployers ». Vous devez cartographier vos usages IA, assurer une supervision humaine, documenter tout et former votre équipe. Les obligations renforcées s’appliquent dès août 2026 pour les systèmes à haut risque (recrutement, promotion, licenciement).</p>
+        <p class="text-xl leading-relaxed mb-10">Les cabinets d’avocats sont considérés comme des <strong>« deployers »</strong> par le Règlement (UE) 2024/1689 (AI Act). Vous devez cartographier vos usages IA, assurer une supervision humaine obligatoire et documenter tout. Les obligations renforcées s’appliquent dès <strong>août 2026</strong> pour les systèmes à haut risque (recrutement, promotion, licenciement, scoring).</p>
+
+        <div class="bg-blue-50 border border-blue-200 p-6 rounded-2xl mb-12">
+            <p class="font-semibold text-blue-900">Réponse directe :</p>
+            <p class="text-lg">Oui, vous êtes concernés. Même si vous n’utilisez que ChatGPT ou un outil de rédaction, vous devez créer une charte IA + registre des traitements IA avant août 2026.</p>
+        </div>
 
         <!-- TABLEAU COMPARATIF -->
-        <table class="w-full border-collapse border border-gray-300 mb-12">
-            <thead><tr class="bg-blue-900 text-white"><th class="p-4">Risque</th><th class="p-4">Exemple en droit du travail</th><th class="p-4">Obligations principales</th></tr></thead>
-            <tbody>
-                <tr><td class="p-4 border">Haut risque</td><td class="p-4 border">Outil d’analyse CV ou scoring de candidats</td><td class="p-4 border">Évaluation risques + DPIA + transparence + contrôle humain obligatoire</td></tr>
-                <!-- autres lignes : risque limité (génération d’actes), minimal (triage email), etc. -->
+        <h2 class="text-2xl font-semibold mb-6">Niveaux de risque IA Act en droit du travail</h2>
+        <table class="w-full text-left mb-12 bg-white shadow rounded-2xl overflow-hidden">
+            <thead class="bg-blue-900 text-white">
+                <tr>
+                    <th class="p-4">Niveau de risque</th>
+                    <th class="p-4">Exemple concret en cabinet</th>
+                    <th class="p-4">Obligations principales</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700">
+                <tr>
+                    <td class="p-4 border-t font-medium">Haut risque</td>
+                    <td class="p-4 border-t">Outil de scoring CV, analyse de candidatures, prédiction de performance</td>
+                    <td class="p-4 border-t">DPIA obligatoire + évaluation des risques + transparence + contrôle humain + registre</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-t font-medium">Risque limité</td>
+                    <td class="p-4 border-t">ChatGPT pour rédiger conclusions ou courriers</td>
+                    <td class="p-4 border-t">Transparence (informer le client) + supervision humaine</td>
+                </tr>
+                <tr>
+                    <td class="p-4 border-t font-medium">Risque minimal</td>
+                    <td class="p-4 border-t">Triage automatique d’emails ou classement de dossiers</td>
+                    <td class="p-4 border-t">Aucune obligation spécifique (mais bonne pratique recommandée)</td>
+                </tr>
             </tbody>
         </table>
 
-        <h2 class="text-2xl font-semibold mb-6">Exemples concrets pour votre cabinet</h2>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-            <li>Vous utilisez ChatGPT pour rédiger des conclusions → risque limité : transparence obligatoire.</li>
-            <li>Votre client employeur utilise un outil de recrutement IA → vous devez l’alerter sur les obligations AI Act et risques prud’homaux.</li>
+        <h2 class="text-2xl font-semibold mb-6">Exemples concrets pour votre cabinet en Normandie</h2>
+        <ul class="space-y-6 text-lg">
+            <li class="flex gap-3"><span class="text-green-600 font-bold">✓</span> Vous utilisez Midjourney ou Claude pour illustrer une plaidoirie → risque limité : vous devez indiquer « généré par IA ».</li>
+            <li class="flex gap-3"><span class="text-green-600 font-bold">✓</span> Votre client employeur utilise un logiciel de recrutement IA → vous devez l’alerter sur les risques de discrimination algorithmique (amende + nullité du licenciement).</li>
+            <li class="flex gap-3"><span class="text-green-600 font-bold">✓</span> Vous analysez des bulletins de paie avec un outil IA → haut risque si décision automatisée : supervision humaine obligatoire.</li>
         </ul>
 
-        <h2 class="text-2xl font-semibold mt-16 mb-6">Sources juridiques officielles</h2>
-        <ul class="list-disc pl-8 text-lg">
-            <li>Règlement (UE) 2024/1689 – AI Act (articles 9, 13, 14, 26 pour deployers)</li>
-            <li>Entrée en vigueur progressive : obligations haut risque dès août 2026</li>
-            <li>CNB et rapport Justice.gouv.fr sur IA dans les professions juridiques</li>
+        <h2 class="text-2xl font-semibold mt-16 mb-6">Sources juridiques officielles (à jour 2026)</h2>
+        <ul class="list-disc pl-8 space-y-3 text-lg">
+            <li>Règlement (UE) 2024/1689 – AI Act (articles 9, 13, 14, 26, 49 pour deployers)</li>
+            <li>Entrée en vigueur progressive : obligations systèmes à haut risque dès août 2026</li>
+            <li>CNB – Rapport « Intelligence artificielle et professions juridiques » (2025)</li>
+            <li>Justice.gouv.fr – Guide IA pour les avocats</li>
         </ul>
 
-        <h2 class="text-2xl font-semibold mt-16 mb-6">Ma méthodologie publique (extrait)</h2>
-        <p>1. Cartographie des usages IA du cabinet<br>2. Évaluation du niveau de risque<br>3. Création de la charte IA + registre des traitements</p>
-        <p class="italic mt-8">La version complète + framework d’audit et modèles de documents sont réservés à mes clients (audit payant).</p>
-
-        <div class="mt-16 text-center">
-            <a href="/contact.html" class="bg-blue-600 text-white px-10 py-4 rounded-2xl text-xl font-semibold">Je veux mon audit IA Act en 48h →</a>
-        </div>
-    </section>
-</body>
-</html>
+        <h2 class="text-2xl font-semibold mt-16 mb-6">Ma méthodologie publique (extrait protégé)</h2>
+        <p class="text-lg">1. Cartographie complète des usages IA du cabinet<br>2. Évaluation du niveau de risque par usage<br>3. Création de la charte IA + registre des traitements IA<br>4. Formation équipe + DPIA si haut risque</p>
+        <p class
