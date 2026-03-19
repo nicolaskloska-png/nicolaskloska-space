@@ -23,22 +23,8 @@
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
         
-        <!-- Hamburger + Switcher langue (mobile & desktop) -->
-        <div class="flex items-center gap-4">
-            <!-- Switcher FR|EN -->
-            <div class="flex bg-gray-100 rounded-full p-1 text-xs font-medium">
-                <a href="javascript:void(0)" onclick="switchLanguage('fr')" 
-                   class="px-4 py-2 rounded-full transition-all" id="lang-fr">🇫🇷 FR</a>
-                <a href="javascript:void(0)" onclick="switchLanguage('en')" 
-                   class="px-4 py-2 rounded-full transition-all" id="lang-en">🇬🇧 EN</a>
-            </div>
-            
-            <!-- Hamburger (visible seulement sur mobile) -->
-            <button onclick="toggleMenu()" class="md:hidden text-4xl text-blue-900">☰</button>
-        </div>
-        
-        <!-- Menu desktop -->
-        <div class="hidden md:flex gap-6 text-sm font-medium items-center">
+        <!-- Desktop menu amélioré (espacement + icône RDV) -->
+        <div class="hidden md:flex gap-8 text-sm font-medium items-center">
             <a href="/" class="hover:text-blue-600">Accueil</a>
             <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
             <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
@@ -48,20 +34,29 @@
             <a href="/services.html" class="hover:text-blue-600">Services</a>
             <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
             <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
-            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-6 py-2 rounded-xl hover:bg-blue-700">RDV gratuit</a>
+            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-7 py-3 rounded-2xl font-semibold hover:bg-blue-700">RDV gratuit</a>
         </div>
+        
+        <!-- Hamburger mobile/tablette -->
+        <button onclick="toggleMenu()" class="md:hidden text-4xl text-blue-900">☰</button>
     </div>
 
-    <!-- Menu mobile -->
+    <!-- Menu mobile vertical -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-8 text-lg">
         <div class="flex flex-col gap-6">
-            <!-- liens mobiles identiques -->
             <a href="/" class="hover:text-blue-600">Accueil</a>
-            <!-- ... tous les autres liens ... -->
+            <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
+            <!-- tous les liens identiques -->
             <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-2xl text-center">RDV gratuit 15 min</a>
         </div>
     </div>
 </nav>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+</script>
 
 <!-- Script à placer juste avant </body> ou après la nav -->
 <script>
