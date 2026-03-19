@@ -4,66 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie • Nicolas Kloska</title>
-    <meta name="description" content="Consultant IA Juridique certifié pour cabinets d’avocats en droit du travail en Normandie. Audit AI Act 2026, charte IA, formation et protection risques prud’homaux. Discovery Call gratuit 15 min.">
+    <meta name="description" content="Consultant IA Juridique certifié. Audit AI Act 2026, charte IA, formation et protection risques prud’homaux. Discovery Call gratuit 15 min.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function toggleMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+        // Switcher langue (ouvre dans nouvel onglet pour éviter bugs)
+        function switchLanguage(lang) {
+            const url = window.location.href;
+            if (lang === 'en') {
+                window.open(`https://translate.google.com/translate?sl=fr&tl=en&u=${encodeURIComponent(url)}`, '_blank');
+            } else {
+                window.location.href = url.split('?')[0];
+            }
         }
     </script>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
 
-    <!-- MENU HAMBURGER + DESKTOP AMÉLIORÉ -->
-    <nav class="bg-white shadow sticky top-0 z-50">
+    <!-- HEADER FIXE (logo + switcher langue + RDV) -->
+    <header class="bg-white shadow sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-blue-900">Nicolas Kloska</a>
-            <button onclick="toggleMenu()" class="md:hidden text-4xl text-blue-900">☰</button>
-            <div class="hidden md:flex gap-8 text-sm font-medium items-center">
-                <a href="/" class="hover:text-blue-600">Accueil</a>
-                <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
-                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
-                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
-                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
-                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
-                <a href="/services.html" class="hover:text-blue-600">Services</a>
-                <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
-                <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
-                <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-7 py-3 rounded-2xl font-semibold hover:bg-blue-700">RDV gratuit</a>
+            <a href="/" class="text-3xl font-bold text-blue-900">Nicolas Kloska</a>
+            
+            <!-- Switcher langue -->
+            <div class="flex bg-gray-100 rounded-full p-1 text-sm font-medium">
+                <button onclick="switchLanguage('fr')" class="px-5 py-2 rounded-full bg-white shadow-sm">🇫🇷 FR</button>
+                <button onclick="switchLanguage('en')" class="px-5 py-2 rounded-full hover:bg-white">🇬🇧 EN</button>
             </div>
+            
+            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-2xl font-semibold">RDV gratuit 15 min</a>
         </div>
-
-        <!-- Menu mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-8 text-lg">
-            <div class="flex flex-col gap-6">
-                <a href="/" class="hover:text-blue-600">Accueil</a>
-                <a href="/pages/ia-act-obligations-avocats.html" class="hover:text-blue-600">IA Act</a>
-                <a href="/pages/securiser-usage-ia-cabinet.html" class="hover:text-blue-600">Sécuriser l’IA</a>
-                <a href="/pages/responsabilite-erreur-ia.html" class="hover:text-blue-600">Responsabilité IA</a>
-                <a href="/pages/ia-risques-prudhomaux.html" class="hover:text-blue-600">Risques Prud’homaux</a>
-                <a href="/pages/discrimination-algorithmique-obligations.html" class="hover:text-blue-600">Discrimination</a>
-                <a href="/services.html" class="hover:text-blue-600">Services</a>
-                <a href="/expertise.html" class="hover:text-blue-600">Expertise</a>
-                <a href="/ressources.html" class="hover:text-blue-600">Ressources</a>
-                <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-2xl text-center">RDV gratuit 15 min</a>
-            </div>
-        </div>
-    </nav>
+    </header>
 
     <!-- HERO -->
-    <section class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl font-bold leading-tight mb-6">Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie</h1>
-            <p class="text-2xl mb-8">Sécurisez votre cabinet contre l’AI Act 2026. Audit, charte IA, formation et protection risques prud’homaux.</p>
-            <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="inline-block bg-white text-blue-900 font-semibold px-10 py-4 rounded-2xl text-lg hover:scale-105 transition">Discovery Call gratuit 15 min →</a>
+    <section class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-32 text-center">
+        <h1 class="text-6xl font-bold mb-8">Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie</h1>
+        <p class="text-3xl max-w-3xl mx-auto">Sécurisez votre cabinet contre l’AI Act 2026. Audit, charte IA, formation et protection risques prud’homaux.</p>
+        <a href="#contact" class="mt-12 inline-block bg-white text-blue-900 px-12 py-5 rounded-3xl text-2xl font-bold">Prendre RDV gratuit</a>
+    </section>
+
+    <!-- SECTION EXPERTISES (les 5 pages expertes en scroll) -->
+    <section id="expertises" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Mes 5 Expertises IA Juridique</h2>
+            <!-- IA Act, Sécuriser l’IA, Responsabilité, Risques Prud’homaux, Discrimination -->
+            <!-- (contenu détaillé des 5 pages expertes ici en scroll) -->
         </div>
     </section>
 
-    <!-- Résumé expert + Risques + FAQ teaser + CTA + Footer (le reste du contenu que tu avais avant) -->
-    <!-- (les sections sont identiques à celles que nous avions construites – elles sont maintenant restaurées) -->
+    <!-- SECTION SERVICES -->
+    <!-- SECTION EXPERTISE -->
+    <!-- SECTION KNOWLEDGE BASE (avec liens Drive protégés) -->
+    <!-- SECTION CONTACT (Calendly + mailto) -->
 
     <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-8 text-center text-sm">
+    <footer class="bg-gray-900 text-white py-12 text-center">
         <p>© 2026 Nicolas Kloska – Consultant IA Juridique Normandie</p>
     </footer>
 </body>
