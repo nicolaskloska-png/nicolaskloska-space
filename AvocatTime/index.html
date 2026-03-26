@@ -3,188 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AvocatTime - Co-Pilote Juridique IA ultra-sécurisé pour cabinets d'avocats en droit social et droit du travail en Normandie.">
+    <meta name="description" content="AvocatTime - Co-Pilote Juridique">
     <title>AvocatTime — Co-Pilote Juridique | Nicolas Kloska</title>
     
+    <!-- Redirection automatique vers l'application Replit -->
+    <meta http-equiv="refresh" content="0; url=https://legal-agent-navigator--iatisation.replit.app/">
+    
     <style>
-        :root {
-            --primary: #0a2540;
-            --accent: #0066cc;
-            --light: #f8f9fa;
-            --gray: #555;
-        }
-        
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: system-ui, sans-serif;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: #1a1a1a;
-            line-height: 1.7;
+            color: #0a2540;
         }
-        
-        .container {
-            max-width: 980px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(10, 37, 64, 0.08);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #0a2540, #1e3a5f);
-            color: white;
-            padding: 60px 50px;
+        .message {
             text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.8rem;
-            margin: 0 0 12px 0;
-            font-weight: 600;
-        }
-        
-        .tagline {
-            font-size: 1.35rem;
-            opacity: 0.95;
-            margin: 0;
-            font-weight: 400;
-        }
-        
-        .content {
-            padding: 60px 50px;
-        }
-        
-        .highlight {
-            background: #e6f0ff;
-            border-left: 6px solid var(--accent);
-            padding: 28px 30px;
-            margin: 35px 0;
-            border-radius: 4px;
             font-size: 1.1rem;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 45px 0;
-        }
-        
-        .feature {
-            padding: 20px 0;
-        }
-        
-        .feature h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.25rem;
-        }
-        
-        .confidentiality {
-            background: #f0f7ff;
-            padding: 35px;
-            border-radius: 12px;
-            margin: 50px 0;
-            border: 1px solid #c0d8ff;
-        }
-        
-        .cta {
-            text-align: center;
-            margin-top: 50px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 16px 36px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background: #0052a3;
-            transform: translateY(-3px);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #777;
-            font-size: 0.95rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>AvocatTime</h1>
-            <p class="tagline">Co-Pilote Juridique IA — Spécialisé Droit Social &amp; Droit du Travail</p>
-        </div>
-
-        <!-- Content -->
-        <div class="content">
-            <p style="font-size: 1.15rem; text-align: center; max-width: 720px; margin: 0 auto 40px;">
-                Développé par <strong>Nicolas Kloska</strong>, Consultant IA Juridique en Normandie.<br>
-                Une solution conçue pour les cabinets d’avocats de 5 à 20 personnes qui souhaitent regagner du temps facturable.
-            </p>
-
-            <div class="highlight">
-                <strong>Objectif :</strong> Réduire de 40 à 60 % le temps administratif tout en garantissant une 
-                <strong>confidentialité de niveau militaire</strong> (mode on-premise, air-gapped, chiffrement AES-256, zéro rétention de données).
-            </div>
-
-            <h2 style="color: var(--primary); margin-top: 50px;">Fonctionnalités principales</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>📄 Génération automatique</h3>
-                    <p>Courriers, conclusions, assignations, transactions et actes procéduraux adaptés au droit du travail.</p>
-                </div>
-                <div class="feature">
-                    <h3>🔍 Extraction intelligente</h3>
-                    <p>Analyse et structuration automatique des pièces jointes (PDF, jugements, courriels).</p>
-                </div>
-                <div class="feature">
-                    <h3>📅 Chronologies &amp; Suivi</h3>
-                    <p>Création rapide de chronologies factuelles, tableaux de pièces et suivi automatique des délais.</p>
-                </div>
-                <div class="feature">
-                    <h3>⏱️ Temps facturable</h3>
-                    <p>Suggestions contextuelles de saisie de temps pour maximiser votre rentabilité.</p>
-                </div>
-            </div>
-
-            <!-- Confidentialité renforcée -->
-            <div class="confidentiality">
-                <h2 style="margin-top: 0; color: var(--primary);">Confidentialité ++</h2>
-                <ul style="margin: 0; padding-left: 20px;">
-                    <li>Mode <strong>on-premise</strong> et <strong>air-gapped</strong> disponible</li>
-                    <li>Chiffrement AES-256 en transit et au repos</li>
-                    <li>Zéro rétention de données (zero data retention)</li>
-                    <li>Audit trail complet et traçabilité</li>
-                    <li>Conformité totale <strong>RGPD</strong> + <strong>AI Act 2026</strong></li>
-                    <li>Respect absolu du <strong>secret professionnel</strong> des avocats</li>
-                </ul>
-            </div>
-
-            <div class="cta">
-                <a href="https://nicolaskloska.space/contact.html" class="btn">
-                    Demander une démonstration privée
-                </a>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            AvocatTime — Développé dans le cadre du Buildathon Agent 4 • 
-            <a href="https://nicolaskloska.space" style="color: var(--accent); text-decoration: none;">Retour au site principal</a>
-        </footer>
+    <div class="message">
+        <p>Redirection vers AvocatTime – Co-Pilote Juridique...</p>
+        <p>Si la redirection ne fonctionne pas, cliquez ici :</p>
+        <a href="https://legal-agent-navigator--iatisation.replit.app/" 
+           style="color: #0066cc; font-weight: 600;">
+            Ouvrir l'application →
+        </a>
     </div>
 </body>
 </html>
