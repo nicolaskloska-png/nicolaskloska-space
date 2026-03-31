@@ -9,7 +9,7 @@
     body {
       margin: 0; padding: 0; background: #0f0a1f; color: white; font-family: 'Inter', sans-serif;
       height: 100vh; display: flex; align-items: center; justify-content: center;
-      background-image: url('https://i.imgur.com/tonImageTunnelGamma.jpg'); /* Remplace par ton image locale si besoin */
+      background-image: url('background.jpg'); /* ← ton image du tunnel gamma */
       background-size: cover; background-position: center; overflow: hidden;
     }
     .container {
@@ -19,7 +19,7 @@
     .timer { font-size: 96px; font-weight: 700; letter-spacing: -4px; margin: 20px 0; }
     .logo { font-size: 18px; opacity: 0.7; margin-bottom: 10px; }
     .now-playing { display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.08); border-radius: 16px; padding: 12px; margin: 25px 0; }
-    .album { width: 60px; height: 60px; border-radius: 12px; background: url('https://i.imgur.com/tonImageTunnelGamma.jpg'); background-size: cover; }
+    .album { width: 60px; height: 60px; border-radius: 12px; background: url('background.jpg'); background-size: cover; }
     .info { text-align: left; }
     .title { font-weight: 600; font-size: 18px; }
     .artist { opacity: 0.7; font-size: 14px; }
@@ -27,8 +27,6 @@
       background: #00ffff; color: #0f0a1f; border: none; padding: 12px 28px; border-radius: 50px;
       font-weight: 600; font-size: 15px; margin: 8px; cursor: pointer;
     }
-    .focus-btn { background: #00ffff; }
-    .break-btn { background: transparent; border: 2px solid #666; color: white; }
     .status { display: flex; justify-content: space-between; margin-top: 30px; font-size: 14px; opacity: 0.8; }
   </style>
 </head>
@@ -46,7 +44,7 @@
     </div>
 
     <div>
-      <button onclick="togglePlay()" id="playBtn">▶️ LANCER LA SESSION</button>
+      <button onclick="togglePlay()" id="playBtn">⏸️ PAUSE SESSION</button>
     </div>
 
     <div class="status">
@@ -60,7 +58,7 @@
       </div>
     </div>
 
-    <audio id="audio" loop>
+    <audio id="audio" autoplay loop>
       <source src="gamma-tunnel-flow.mp3" type="audio/mpeg">
     </audio>
   </div>
@@ -91,8 +89,12 @@
       }
     }
 
-    // Démarrage automatique optionnel (enlève le commentaire si tu veux qu’il démarre direct)
-    // window.onload = () => { audio.play(); timerInterval = setInterval(updateTimer, 1000); playBtn.innerHTML = '⏸️ PAUSE SESSION'; };
+    // === INITIALISATION FOCUS AUTOMATIQUE ===
+    window.onload = () => {
+      audio.play();
+      timerInterval = setInterval(updateTimer, 1000);
+      playBtn.innerHTML = '⏸️ PAUSE SESSION';
+    };
   </script>
 </body>
 </html>
