@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamma Tunnel Flow • Deep Work</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+    body {
+      margin: 0; padding: 0; background: #0f0a1f; color: white; font-family: 'Inter', sans-serif;
+      height: 100vh; overflow: hidden; position: relative;
+    }
+    /* === VIDÉO MP4 EN BOUCLE EN ARRIÈRE-PLAN === */
+    #bgVideo {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.85) contrast(1.1);
+    }
+    .container {
+      width: 100%; max-width: 480px; background: rgba(15,10,31,0.88); border-radius: 24px;
+      padding: 30px; box-shadow: 0 0 80px rgba(0,255,255,0.4); text-align: center; position: relative; margin: 0 auto; top: 50%; transform: translateY(-50%);
+    }
+    .timer { font-size: 96px; font-weight: 700; letter-spacing: -4px; margin: 20px 0; }
+    .logo { font-size: 18px; opacity: 0.7; margin-bottom: 10px; }
+    .now-playing { display: flex; align-items: center; gap: 15px; background: rgba(255,255,255,0.08); border-radius: 16px; padding: 12px; margin: 25px 0; }
+    .album { width: 60px; height: 60px; border-radius: 12px; background: #00ffff; opacity: 0.2; }
+    .info { text-align: left; }
+    .title { font-weight: 600; font-size: 18px; }
+    .artist { opacity: 0.7; font-size: 14px; }
+    button { background: #00ffff; color: #0f0a1f; border: none; padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: 15px; margin: 8px; cursor: pointer; }
+    .status { display: flex; justify-content: space-between; margin-top: 30px; font-size: 14px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <!-- Vidéo MP4 en boucle en arrière-plan -->
+  <video id="bgVideo" autoplay loop muted playsinline>
+    <source src="tunnel-gamma-animated.mp4" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <div class="logo">GAMMA FOCUS</div>
+    <div id="timer" class="timer">00:00</div>
+    
+    <div class="now-playing">
+      <div class="album"></div>
+      <div class="info">
+        <div class="title">Gamma Tunnel Flow</div>
+        <div class="artist">by Grok • Hyperfocus Edition</div>
+      </div>
+    </div>
+
+    <div>
+      <button onclick="togglePlay()" id="playBtn">⏸️ PAUSE SESSION</button>
+    </div>
+
+    <div class="status">
+      <div>
+        <strong>NEURAL EFFECT</strong><br>
+        Gamma 40Hz • Medium
+      </div>
+      <div>
+        <strong>SYNCING + BOOSTING</strong><br>
+        Cognitive Endurance • Unbreakable Focus
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio" autoplay loop>
+    <source src="gamma-tunnel-flow.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    let startTime;
+    let timerInterval;
+    const timerEl = document.getElementById('timer');
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('playBtn');
+
+    function formatTime(seconds) {
+      const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const sec = String(seconds % 60).padStart(2, '0');
+      return `${min}:${sec}`;
+    }
+
+    function updateTimer() {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      timerEl.textContent = formatTime(elapsed);
+    }
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play();
+        startTime = Date.now();
+        playBtn.innerHTML = '⏸️ PAUSE SESSION';
+        timerInterval = setInterval(updateTimer, 100);
+      } else {
+        audio.pause();
+        playBtn.innerHTML = '▶️ REPRENDRE';
+        clearInterval(timerInterval);
+      }
+    }
+
+    // === INITIALISATION FOCUS AUTOMATIQUE ===
+    window.onload = () => {
+      audio.play();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+      playBtn.innerHTML = '⏸️ PAUSE SESSION';
+    };
+  </script>
+</body>
+</html>
+
