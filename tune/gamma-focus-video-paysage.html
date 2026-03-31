@@ -10,21 +10,23 @@
       margin: 0; padding: 0; background: #0f0a1f; color: white; font-family: 'Inter', sans-serif;
       height: 100vh; overflow: hidden; position: relative;
     }
-    /* === VIDÉO MP4 PIVOTÉE 90° EN PAYSAGE === */
+    /* === VIDÉO OPTIMISÉE ANTI-PIXELISATION === */
     #bgVideo {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100vh;        /* dimensions inversées pour le pivot */
+      top: 50%; left: 50%;
+      width: 100vh;
       height: 100vw;
       transform: translate(-50%, -50%) rotate(90deg);
       object-fit: cover;
       z-index: -1;
-      filter: brightness(0.85) contrast(1.1);
+      image-rendering: -webkit-optimize-contrast; /* anti-pixelisation */
+      image-rendering: crisp-edges;
+      filter: brightness(0.9) contrast(1.05) saturate(1.05); /* plus doux */
     }
     .container {
       width: 100%; max-width: 480px; background: rgba(15,10,31,0.88); border-radius: 24px;
-      padding: 30px; box-shadow: 0 0 80px rgba(0,255,255,0.4); text-align: center; position: relative; margin: 0 auto; top: 50%; transform: translateY(-50%);
+      padding: 30px; box-shadow: 0 0 80px rgba(0,255,255,0.4); text-align: center; 
+      position: relative; margin: 0 auto; top: 50%; transform: translateY(-50%);
     }
     .timer { font-size: 96px; font-weight: 700; letter-spacing: -4px; margin: 20px 0; }
     .logo { font-size: 18px; opacity: 0.7; margin-bottom: 10px; }
@@ -39,7 +41,6 @@
 </head>
 <body>
 
-  <!-- Vidéo animée pivotée 90° en arrière-plan -->
   <video id="bgVideo" autoplay loop muted playsinline>
     <source src="tunnel-gamma-animated.mp4" type="video/mp4">
   </video>
@@ -61,14 +62,8 @@
     </div>
 
     <div class="status">
-      <div>
-        <strong>NEURAL EFFECT</strong><br>
-        Gamma 40Hz • Medium
-      </div>
-      <div>
-        <strong>SYNCING + BOOSTING</strong><br>
-        Cognitive Endurance • Unbreakable Focus
-      </div>
+      <div><strong>NEURAL EFFECT</strong><br>Gamma 40Hz • Medium</div>
+      <div><strong>SYNCING + BOOSTING</strong><br>Cognitive Endurance • Unbreakable Focus</div>
     </div>
   </div>
 
@@ -96,8 +91,7 @@
 
     function togglePlay() {
       if (audio.paused) {
-        audio.play();
-        startTime = Date.now();
+        audio.play(); startTime = Date.now();
         playBtn.innerHTML = '⏸️ PAUSE SESSION';
         timerInterval = setInterval(updateTimer, 100);
       } else {
