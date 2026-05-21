@@ -3,124 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie • Nicolas Kloska</title>
-    <meta name="description" content="Consultant IA Juridique certifié. Audit AI Act 2026, charte IA, formation et protection risques prud’homaux. Discovery Call gratuit 15 min.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>IATISATION - Masterclass Inside the Artificial Mind</title>
+    <!-- Tailwind CSS CDN pour un design moderne et rapide -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --navy: #0b1d3a;
-            --navy-mid: #122447;
-            --navy-light: #1a3160;
-            --gold: #c8a96e;
-            --gold-light: #e2c990;
-            --white: #f5f3ef;
-            --muted: #8fa3c0;
-            --tag-bg: rgba(200,169,110,0.12);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: var(--navy);
-            color: var(--white);
-            font-family: 'DM Sans', sans-serif;
-        }
-        .header-title h1 {
-            font-family: 'Playfair Display', serif;
-        }
-        /* Style complet du Service Menu que tu as fourni */
-        /* (j’ai intégré tout ton CSS du fichier service_menu_nicolas_kloska.html ici) */
-        /* ... (le style complet est inclus) ... */
+        body { font-family: 'Inter', sans-serif; }
     </style>
-    <script>
-        function switchLanguage(lang) {
-            const url = window.location.href;
-            if (lang === 'en') {
-                window.open(`https://translate.google.com/translate?sl=fr&tl=en&u=${encodeURIComponent(url)}`, '_blank');
-            } else {
-                window.location.href = url.split('?')[0];
-            }
-        }
-    </script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
 
-    <!-- HEADER FIXE identique à ton fichier PJ -->
-    <div class="header">
-        <div class="header-left">
-            <img class="avatar" src="..." alt="Nicolas Kloska">
-            <div class="logo-img">... </div>
-            <div class="header-title">
-                <h1>Nicolas Kloska</h1>
-                <p>Consultant IA Juridique • Droit du Travail</p>
+    <!-- Header / Logo -->
+    <header class="border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-wider text-amber-500 uppercase">
+                IATISATION<span class="text-slate-400 font-light">.</span>
+            </div>
+            <div class="text-xs tracking-widest text-slate-400 uppercase font-medium bg-slate-900 px-3 py-1.5 rounded-full border border-slate-800">
+                Cabinet Conseil IA
             </div>
         </div>
-        <div class="header-badge">
-            <strong>The Client Journey & Your Service Matrix</strong><br>
-            AI Consulting · Cabinets Avocats · Droit Social<br>
-            2–20 collaborateurs · Caen & Normandie
-        </div>
-    </div>
+    </header>
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-32 text-center">
-        <h1 class="text-6xl font-bold mb-8 leading-tight">Consultant IA Juridique pour Cabinets d’Avocats en Droit du Travail en Normandie</h1>
-        <p class="text-3xl max-w-4xl mx-auto">Je sécurise votre cabinet contre l’AI Act 2026. Audit, charte IA, formation et protection risques prud’homaux.</p>
-        <a href="#contact" class="mt-12 inline-block bg-white text-blue-900 px-12 py-5 rounded-3xl text-2xl font-bold">Prendre RDV gratuit maintenant</a>
-    </section>
+    <main class="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-20">
+        
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto space-y-6">
+            <p class="text-amber-500 font-medium tracking-wide text-sm md:text-base uppercase">"Ne subissez plus l'innovation. Maîtrisez-la."</p>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+                MASTERCLASS : Inside the Artificial Mind
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 font-light leading-relaxed">
+                50 minutes d'analyse experte pour auditer, structurer et sécuriser vos déploiements IA.
+            </p>
+        </section>
 
-    <!-- RISQUES -->
-    <section class="py-20 bg-white text-black">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Les risques juridiques IA en 2026</h2>
-            <ul class="grid md:grid-cols-2 gap-6 text-lg">
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Amendes jusqu’à 7 % du CA</li>
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Responsabilité pleine de l’avocat</li>
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Discrimination algorithmique</li>
-                <li class="flex gap-3"><span class="text-red-600 font-bold">⚠️</span> Nullité des actes</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- 5 EXPERTISES -->
-    <section class="py-20 bg-gray-100 text-black">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">Mes 5 Expertises IA Juridique</h2>
-            <div class="space-y-20">
-                <div><h3 class="text-3xl font-bold mb-4">1. IA Act : obligations pour les cabinets</h3><p class="text-lg">Les cabinets sont des « deployers ». Cartographie obligatoire, supervision humaine, DPIA pour haut risque. Tableau comparatif + sources officielles + méthodologie publique.</p></div>
-                <div><h3 class="text-3xl font-bold mb-4">2. Comment sécuriser l’usage de l’IA</h3><p class="text-lg">Les 5 piliers (gouvernance, formation, outils souverains, documentation, contrôle humain) + exemples concrets.</p></div>
-                <div><h3 class="text-3xl font-bold mb-4">3. Responsabilité juridique en cas d’erreur IA</h3><p class="text-lg">L’avocat reste 100 % responsable. Tableau risques vs mesures + exemples jurisprudence.</p></div>
-                <div><h3 class="text-3xl font-bold mb-4">4. IA & risques prud’homaux</h3><p class="text-lg">Nullité de licenciement, calculs erronés, contestation délais. Grille d’analyse complète.</p></div>
-                <div><h3 class="text-3xl font-bold mb-4">5. IA & discrimination algorithmique</h3><p class="text-lg">Interdiction absolue + audit biais obligatoire. Tableau obligations employeurs.</p></div>
+        <!-- Video & CTA Area -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Video Player Preview (7 Cols) -->
+            <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl group relative aspect-video flex flex-col justify-center items-center p-6 text-center">
+                <!-- Background Image Placeholder simulating video -->
+                <div class="absolute inset-0 bg-radial from-slate-900/40 to-slate-950 opacity-80 mix-blend-multiply"></div>
+                
+                <!-- Teaser Content -->
+                <div class="relative z-10 space-y-4 max-w-sm">
+                    <div class="w-16 h-16 bg-amber-500 text-slate-950 rounded-full flex items-center justify-center mx-auto shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 ml-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-white">Aperçu gratuit (1:00 min)</p>
+                        <p class="text-xs text-slate-400 mt-1">Durée totale de la session : 52:14 min</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- NOUVEAU SERVICE MENU (intégration complète de ton fichier PJ) -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <!-- Ton fichier service_menu_nicolas_kloska.html est intégré ici à 100 % -->
-            <!-- Le tableau navy/gold avec les niveaux est parfaitement affiché -->
-            <!-- (le code complet de ton fichier est collé ici) -->
-        </div>
-    </section>
+            <!-- CTA Sidebar (5 Cols) -->
+            <div class="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl">
+                <div class="flex items-center space-x-2 text-amber-500 text-xs font-semibold uppercase tracking-wider">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0V10.5m-2.25 1.5h13.5c.621 0 1.125.504 1.125 1.125v7.423c0 .621-.504 1.125-1.125 1.125H4.875c-.621 0-1.125-.504-1.125-1.125V13.125c0-.621.504-1.125 1.125-1.125Z" />
+                    </svg>
+                    <span>Accès Réservé</span>
+                </div>
+                
+                <h3 class="text-xl font-bold text-white">Déverrouiller la Masterclass</h3>
+                
+                <p class="text-sm text-slate-400 leading-relaxed font-light">
+                    Cette vidéo de formation complète est un contenu premium destiné aux professionnels souhaitant aller au-delà de la "hype" technologique.
+                </p>
 
-    <!-- KNOWLEDGE BASE -->
-    <section class="py-20 bg-gray-100 text-black">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Knowledge Base IA Juridique</h2>
-            <!-- 12 cartes avec extraits + liens Drive protégés -->
-        </div>
-    </section>
+                <div class="pt-4 border-t border-slate-800">
+                    <!-- Remplacer XX,00 € par votre tarif -->
+                    <a href="#payment-link" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 tracking-wide text-sm">
+                        Acheter l'accès complet — XX,00 €
+                    </a>
+                    <p class="text-[11px] text-center text-slate-500 mt-3 flex items-center justify-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5 text-emerald-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                        </svg>
+                        Paiement sécurisé. Accès immédiat et illimité.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 bg-blue-900 text-white text-center">
-        <h2 class="text-4xl font-bold mb-8">Prenez rendez-vous</h2>
-        <a href="https://calendly.com/nicolaskloska_ai-law-firm/15min" target="_blank" class="inline-block bg-white text-blue-900 px-12 py-6 rounded-3xl text-2xl font-bold">Ouvrir Calendly maintenant →</a>
-    </section>
+        <hr class="border-slate-900" />
 
-    <!-- FOOTER -->
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <p>© 2026 Nicolas Kloska – Consultant IA Juridique Normandie</p>
+        <!-- Program & Why Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            
+            <!-- Chapitrage (7 Cols) -->
+            <div class="md:col-span-7 space-y-6">
+                <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2.5">
+                    <span class="w-1.5 h-5 bg-amber-500 rounded-full"></span>
+                    Le Chapitrage de la Session
+                </h2>
+                <p class="text-sm text-slate-400 font-light">
+                    Afin de vous permettre un apprentissage structuré et de faciliter votre prise de notes, cette Masterclass est divisée en 4 actes précis :
+                </p>
+                
+                <div class="space-y-4 pt-2">
+                    <!-- Acte 1 -->
+                    <div class="p-4 bg-slate-900/40 border border-slate-900 rounded-xl hover:border-slate-800 transition-colors">
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-amber-500">00:00</span>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-semibold text-slate-200">Acte 1 : Introduction et changement de paradigme</h4>
+                                <p class="text-xs text-slate-400 mt-1 font-light">Pourquoi l'année de l'hyper-automatisation est un mirage si les fondamentaux ne sont pas maîtrisés.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Acte 2 -->
+                    <div class="p-4 bg-slate-900/40 border border-slate-900 rounded-xl hover:border-slate-800 transition-colors">
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-amber-500">12:15</span>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-semibold text-slate-200">Acte 2 : Inside the Artificial Mind</h4>
+                                <p class="text-xs text-slate-400 mt-1 font-light">Plongée dans l'architecture des modèles de langage. Comprendre leur logique interne, leurs biais et la mécanique des "hallucinations" pour mieux les anticiper.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Acte 3 -->
+                    <div class="p-4 bg-slate-900/40 border border-slate-900 rounded-xl hover:border-slate-800 transition-colors">
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-amber-500">30:40</span>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-semibold text-slate-200">Acte 3 : Audit, sécurité et conformité</h4>
+                                <p class="text-xs text-slate-400 mt-1 font-light">Comment encadrer juridiquement et techniquement le déploiement d'agents autonomes. Les prérequis pour garantir la confidentialité des données sensibles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Acte 4 -->
+                    <div class="p-4 bg-slate-900/40 border border-slate-900 rounded-xl hover:border-slate-800 transition-colors">
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-amber-500">42:00</span>
+                            <div class="flex-1">
+                                <h4 class="text-sm font-semibold text-slate-200">Acte 4 : Le Diagnostic des Personas (Atelier Pratique)</h4>
+                                <p class="text-xs text-slate-400 mt-1 font-light">Présentation et explication du questionnaire exclusif. Une méthode pas-à-pas pour définir le type d'interaction IA dont vous avez réellement besoin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pourquoi / Valeur (5 Cols) -->
+            <div class="md:col-span-5 space-y-6 lg:pl-4">
+                <div class="space-y-4">
+                    <h2 class="text-xl font-bold tracking-tight text-white flex items-center gap-2.5">
+                        <span class="w-1.5 h-5 bg-amber-500 rounded-full"></span>
+                        Pourquoi suivre cette formation ?
+                    </h2>
+                    <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        L'intelligence artificielle n'est pas une simple boîte à outils que l'on branche au hasard. C'est un écosystème complexe qui exige une véritable rigueur de conception.
+                    </p>
+                    <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        En suivant cette session, vous ne repartirez pas avec de vagues concepts, mais avec une <strong>méthodologie d'audit claire</strong>. Vous serez capable d'évaluer la pertinence d'un outil IA pour votre secteur, d'en cerner les limites de conformité légale et technique.
+                    </p>
+                </div>
+
+                <!-- Inclusion Outil -->
+                <div class="p-6 bg-amber-500/5 border border-amber-500/20 rounded-2xl space-y-3">
+                    <h4 class="text-sm font-semibold text-amber-500 flex items-center gap-2">
+                        🔧 L'outil inclus : Le Questionnaire des Personas
+                    </h4>
+                    <p class="text-xs text-slate-300 leading-relaxed font-light">
+                        À la fin de la vidéo, vous serez invité à remplir l'Audit des Personas. Cet outil de diagnostic sur mesure agit comme un filtre pour modéliser l'assistant ou l'agent IA parfait pour votre flux de travail.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Bottom CTA -->
+        <section class="bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-8 text-center space-y-4">
+            <h3 class="text-xl font-bold text-white">Prêt à sécuriser vos processus métiers ?</h3>
+            <p class="text-sm text-slate-400 max-w-xl mx-auto font-light">Obtenez un accès immédiat à la vidéo de 50 minutes et téléchargez l'Audit des Personas dès maintenant.</p>
+            <div class="pt-2">
+                <a href="#payment-link" class="inline-block bg-slate-800 hover:bg-slate-700 text-white font-medium px-8 py-3 rounded-xl transition-all border border-slate-750 text-sm">
+                    Déverrouiller la session & accéder à l'Audit
+                </a>
+            </div>
+        </section>
+
+        <!-- Private Comments/Consulting Notice (Value Add) -->
+        <section class="border-t border-slate-900 pt-8 text-center">
+            <p class="text-xs text-slate-500 max-w-lg mx-auto font-light">
+                💡 <span class="text-slate-400">Inclus dans votre accès :</span> Un espace d'échange privé est disponible sous la vidéo pour poser vos questions techniques directement à notre consultant.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-600">
+        <p>&copy; 2026 IATISATION. Tous droits réservés. Contenu à visée d'audit et conseil stratégique.</p>
     </footer>
+
 </body>
 </html>
